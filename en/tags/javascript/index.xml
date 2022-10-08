@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Javascript on HungPT&#39;s Blog</title>
+    <link>http://example.org/en/tags/javascript/</link>
+    <description>Recent content in Javascript on HungPT&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>thaihung412@gmail.com (Hùng Phạm)</managingEditor>
+    <webMaster>thaihung412@gmail.com (Hùng Phạm)</webMaster>
+    <copyright>©2022, All Rights Reserved</copyright>
+    <lastBuildDate>Tue, 16 Aug 2022 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="http://example.org/en/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Cách sử dụng useMemo và memo trong ReactJS</title>
+        <link>http://example.org/en/posts/use_memo_in_reactjs/</link>
+        <pubDate>Tue, 16 Aug 2022 00:00:00 +0000</pubDate>
+        <author>thaihung412@gmail.com (Hùng Phạm)</author>
+        <atom:modified>Tue, 16 Aug 2022 00:00:00 +0000</atom:modified>
+        <guid>http://example.org/en/posts/use_memo_in_reactjs/</guid>
+        <description>Trong bài viết lần này, chúng ta hãy cùng tìm hiểu 1 hook mới trong ReactJS là useMemo và 1 HOC trong ReactJS là memo nhé!😄
+Trong quá trình làm việc với React, chúng ta sẽ có lựa chọn như:
+ Hooks render props higher-order-components (HOCs)  Mình sẽ nói cụ thể hơn 3 phần này khác gì nhau ở bài viết sau nhé 😄
+1. memo trong ReactJS mình có 1 đoạn code đơn giản như sau</description>
+        
+        <dc:creator>Hung pham</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Javascript</category>
+            
+          
+            
+              <category>ReactJS</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Cách sử dụng useReduce trong ReactJS</title>
+        <link>http://example.org/en/posts/use_reduce_in_reactjs/</link>
+        <pubDate>Tue, 16 Aug 2022 00:00:00 +0000</pubDate>
+        <author>thaihung412@gmail.com (Hùng Phạm)</author>
+        <atom:modified>Tue, 16 Aug 2022 00:00:00 +0000</atom:modified>
+        <guid>http://example.org/en/posts/use_reduce_in_reactjs/</guid>
+        <description></description>
+        
+        <dc:creator>Hung pham</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Javascript</category>
+            
+          
+            
+              <category>ReactJS</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Cách sử dụng useRef trong ReactJS</title>
+        <link>http://example.org/en/posts/use_ref/</link>
+        <pubDate>Tue, 16 Aug 2022 00:00:00 +0000</pubDate>
+        <author>thaihung412@gmail.com (Hùng Phạm)</author>
+        <atom:modified>Tue, 16 Aug 2022 00:00:00 +0000</atom:modified>
+        <guid>http://example.org/en/posts/use_ref/</guid>
+        <description>Trong bài viết lần này, chúng ta hãy cùng tìm hiểu 1 hook mới trong ReactJS là useRef nhé!😄
+Vậy useRef được sử dụng khi nào? Và mục đích sử dụng của hook này là gì?
+Đầu tiên mình sẽ xây dựng 1 ứng dụng đếm ngược đơn giản như sau:
+import {useState, useEffect, useRef} from &amp;quot;react&amp;quot;; function Content() { const [number, setNumber] = useState(9000) const handle_start = () =&amp;gt; { setInterval(() =&amp;gt; { setNumber(preNumber =&amp;gt; preNumber - 1) },100) } const handle_stop = () =&amp;gt; { } return ( &amp;lt;div&amp;gt; &amp;lt;div style={ {&#39;fontSize&#39;: &#39;100px&#39;} }&amp;gt; {number} &amp;lt;/div&amp;gt; &amp;lt;div&amp;gt; &amp;lt;button onClick={handle_start} &amp;gt;Start&amp;lt;/button&amp;gt; &amp;lt;button onClick={handle_stop} &amp;gt;Stop&amp;lt;/button&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; ) } export default Content; Giao diện đơn giản nó sẽ như thế này 😄</description>
+        
+        <dc:creator>Hung pham</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Javascript</category>
+            
+          
+            
+              <category>ReactJS</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Cách sử dụng useEffect trong ReactJS (Phần 3)</title>
+        <link>http://example.org/en/posts/use_effect_part3/</link>
+        <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
+        <author>thaihung412@gmail.com (Hùng Phạm)</author>
+        <atom:modified>Mon, 01 Aug 2022 00:00:00 +0000</atom:modified>
+        <guid>http://example.org/en/posts/use_effect_part3/</guid>
+        <description>Nội dung ở phần này mình muốn đưa cho các bạn sẽ có 3 phần chính:
+ Cách listen DOMEvent trong React component Vấn để xảy ra khi chúng ta listen DOM Event là gì? Cách khắc phục vấn đề nàymột  Trong phần này, chúng ta phải nắm vững kiến thức Javascript cơ bản đó là listen DOM Event bạn có thể tham khảo tài liệu tại đây Listen DOM Event</description>
+        
+        <dc:creator>Hung pham</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Javascript</category>
+            
+          
+            
+              <category>ReactJS</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Cách sử dụng useEffect trong ReactJS (Phần 4)</title>
+        <link>http://example.org/en/posts/use_effect_part4/</link>
+        <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
+        <author>thaihung412@gmail.com (Hùng Phạm)</author>
+        <atom:modified>Mon, 01 Aug 2022 00:00:00 +0000</atom:modified>
+        <guid>http://example.org/en/posts/use_effect_part4/</guid>
+        <description>Ở phần này, mình sẽ xây dựng app chat đơn giản để có thể giúp các bạn nắm rõ hơn cách sử dụng useEffect như thế nào nhé!😄
+Ở đây mình sẽ không tạo web socket server mà mình sẽ đi fake ra những bình luận</description>
+        
+        <dc:creator>Hung pham</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Javascript</category>
+            
+          
+            
+              <category>ReactJS</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title> Mounted &amp; Unmounted? </title>
+        <link>http://example.org/en/posts/placeholder-text/</link>
+        <pubDate>Mon, 25 Jul 2022 00:00:00 +0000</pubDate>
+        <author>thaihung412@gmail.com (Hùng Phạm)</author>
+        <atom:modified>Mon, 25 Jul 2022 00:00:00 +0000</atom:modified>
+        <guid>http://example.org/en/posts/placeholder-text/</guid>
+        <description>Trong bài viết lần này chúng ta sẽ cùng hiểu 2 thuật ngữ Mount và Unmount. Trong đó Mount có nghĩa là gắn vào, Unmount
+nghĩa là tháo ra gỡ ra.
+Đây là 2 thuật ngữ chúng ta sẽ dùng rất nhiều khi làm việc với Reactjs, cụ thể làm làm việc với component.
+Để ví dụ cho các bạn về 2 thuật ngữ này mình sẽ tạo ra một component được viết trong file Content.</description>
+        
+        <dc:creator>Hung pham</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Javascript</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Cách sử dụng useEffect trong Reactjs (Phần 1)</title>
+        <link>http://example.org/en/posts/use_effect/</link>
+        <pubDate>Mon, 25 Jul 2022 00:00:00 +0000</pubDate>
+        <author>thaihung412@gmail.com (Hùng Phạm)</author>
+        <atom:modified>Mon, 25 Jul 2022 00:00:00 +0000</atom:modified>
+        <guid>http://example.org/en/posts/use_effect/</guid>
+        <description>useEffect là 1 hook cơ bản trong Reactjs, nhưng khi bạn mới học sẽ thấy nó hơi khó một chút😁. Lý do nó khó không phải vì hook
+này nó khó mà vì để có thể sử dụng được hook này đòi hỏi bạn phải nắm vững kiến thức Javascript cơ bản và nâng cao. Thế nên
+nếu bạn đi vào đây học quá nhanh hoặc quên mất kiến thức nền thì học sẽ bị khó.</description>
+        
+        <dc:creator>Hung pham</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Javascript</category>
+            
+          
+            
+              <category>ReactJS</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Cách sử dụng useEffect trong Reactjs (Phần 2)</title>
+        <link>http://example.org/en/posts/use_effect_part2/</link>
+        <pubDate>Mon, 25 Jul 2022 00:00:00 +0000</pubDate>
+        <author>thaihung412@gmail.com (Hùng Phạm)</author>
+        <atom:modified>Mon, 25 Jul 2022 00:00:00 +0000</atom:modified>
+        <guid>http://example.org/en/posts/use_effect_part2/</guid>
+        <description>Ở phần 1, chúng ta đã tìm hiểu về trường hợp đầu tiên sử dụng useEffect, cùng hiểu tại sao phải sử dụng tham số thứ 2 trong useEffect. Trong
+phần này chúng ta sẽ tìm hiểu rõ hơn.
+Để có thể xử lý vấn đề api call liên tục k dừng ở phần 1, bạn chỉ cần thêm tham số thứ 2 trong useEffect có thể là 1 mảng rỗng []</description>
+        
+        <dc:creator>Hung pham</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Javascript</category>
+            
+          
+            
+              <category>ReactJS</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Tìm hiểu về phương thức Reduce trong Javascript</title>
+        <link>http://example.org/en/posts/javascript-array-reduce/</link>
+        <pubDate>Sat, 09 Jul 2022 10:12:07 +0700</pubDate>
+        <author>thaihung412@gmail.com (Hùng Phạm)</author>
+        <atom:modified>Sat, 09 Jul 2022 10:12:07 +0700</atom:modified>
+        <guid>http://example.org/en/posts/javascript-array-reduce/</guid>
+        <description>Gỉa sử chúng có một mảng các chữ số như sau:
+const numbers = [2, 4, 6]; Làm sao chúng ta có thể tính tổng các chữ số trong mảng trên. Sử dụng reduce trong javascript chúng ta có dễ dàng làm việc này mà không cần sử dụng vòng lặp.
+const numbers = [2, 4, 6]; const sum = numbers.reduce(function(sum, number) { const updatedSum = sum + number; return updatedSum; }, 0); sum; // 12 Trong bài viết này, chúng ta sẽ tìm hiểu về phương thức reduce và cách sử dụng array.</description>
+        
+        <dc:creator>Hung Pham</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Javascript</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>(Javascript trong Odoo) Phần 2 Tạo logic cho widget</title>
+        <link>http://example.org/en/posts/odoo-javascript-programming-tutorial-part-two-widget-logic/</link>
+        <pubDate>Thu, 07 Jul 2022 14:15:33 +0700</pubDate>
+        <author>thaihung412@gmail.com (Hùng Phạm)</author>
+        <atom:modified>Thu, 07 Jul 2022 14:15:33 +0700</atom:modified>
+        <guid>http://example.org/en/posts/odoo-javascript-programming-tutorial-part-two-widget-logic/</guid>
+        <description>Trong phần 1, chúng ta đã tạo ra 1 Widget để hiển thị một đoạn text văn bản. Sang phần 2 này, chúng ta cùng nhau xây dựng một logic cho widget này.
+Tiếp theo bạn cần khai báo 1 trường như sau:
+field_one = fields.Integer(&#39;Field One&#39;) Thông thường khi chúng ta khai báo 1 field như trên và thêm chúng vào XML, mặc định Odoo sẽ cho chúng ta sửa giá trị trên giao diện kiểu như sau:</description>
+        
+        <dc:creator>Hung Pham</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Odoo</category>
+            
+          
+            
+              <category>Javascript</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>(Javascript trong Odoo) Phần 1 Tạo widget</title>
+        <link>http://example.org/en/posts/odoo-javascript-programming-tutorial-part-one-create-widget-view/</link>
+        <pubDate>Thu, 07 Jul 2022 11:22:29 +0700</pubDate>
+        <author>thaihung412@gmail.com (Hùng Phạm)</author>
+        <atom:modified>Thu, 07 Jul 2022 11:22:29 +0700</atom:modified>
+        <guid>http://example.org/en/posts/odoo-javascript-programming-tutorial-part-one-create-widget-view/</guid>
+        <description>Đối với lập trình viên odoo, Widget là một thứ khá mới mẻ bởi vì chúng ta hiếm khi lập trình với ngôn ngữ javascript.
+Hầu như tất cả logic được viết với python, ngoại trừ khi tùy chỉnh điểm bán hàng(POS) hoặc mô-đun thương mại điện tử(Website).
+Đối với những lập trình viên odoo, theo cá nhân mình thấy thì javascript là phần cuối cùng mà bạn nên học. Tốt hơn hết bạn nên lập trung code với python</description>
+        
+        <dc:creator>Hung Pham</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Odoo</category>
+            
+          
+            
+              <category>Javascript</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Sử dụng useState() Hook trong React như nào cho đúng?</title>
+        <link>http://example.org/en/posts/su-dung-usestate-hook-trong-react-nhu-nao-cho-dung/</link>
+        <pubDate>Tue, 05 Jul 2022 00:00:00 +0000</pubDate>
+        <author>thaihung412@gmail.com (Hùng Phạm)</author>
+        <atom:modified>Tue, 05 Jul 2022 00:00:00 +0000</atom:modified>
+        <guid>http://example.org/en/posts/su-dung-usestate-hook-trong-react-nhu-nao-cho-dung/</guid>
+        <description>&lt;p&gt;Để quản lý State trong React Function Component, chúng ta dùng Hook useState().&lt;/p&gt;</description>
+        
+        <dc:creator>Hung Pham</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>JavaScript</category>
+            
+          
+            
+              <category>ReactJS</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Kiến thức Javascript cơ bản cần phải biết trước khi học ReactJS</title>
+        <link>http://example.org/en/posts/kien-thuc-javascript-co-ban-can-phai-biet-truoc-khi-hoc-react-native-reactjs/</link>
+        <pubDate>Mon, 04 Jul 2022 00:00:00 +0000</pubDate>
+        <author>thaihung412@gmail.com (Hùng Phạm)</author>
+        <atom:modified>Mon, 04 Jul 2022 00:00:00 +0000</atom:modified>
+        <guid>http://example.org/en/posts/kien-thuc-javascript-co-ban-can-phai-biet-truoc-khi-hoc-react-native-reactjs/</guid>
+        <description>&lt;p&gt;ReactJS là một Javascript framework rất phổ biến với giới lập trình Web Frontend hiện nay, số lượng tuyển dụng lập trình viên ReactJS cũng rất lớn. Do đó nhiều người mới học Web Frontend sau khi học xong một chút HTML CSS JS là muốn nhảy vào lập trình ReactJS ngay. Điều này dẫn đến hệ lụy là các bạn sẽ bị hổng kiến thức cơ bản, hoặc khi học ReactJS sẽ rất chật vật vì không hiểu cú pháp, không hiểu bản chất, …&lt;/p&gt;</description>
+        
+        <dc:creator>Hung Pham</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>JavaScript</category>
+            
+          
+            
+              <category>ReactJS</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
