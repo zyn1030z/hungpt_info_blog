@@ -3,394 +3,394 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/en/showcase/hugo/hugo-theme-zzo/</loc>
+    <loc>http://hungpt.info/en/showcase/hugo/hugo-theme-zzo/</loc>
     <lastmod>2020-01-19T21:13:42+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/showcase/hugo/hugo-theme-zdoc/</loc>
+    <loc>http://hungpt.info/en/showcase/hugo/hugo-theme-zdoc/</loc>
     <lastmod>2020-01-19T21:13:42+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/</loc>
+    <loc>http://hungpt.info/en/</loc>
     <lastmod>2022-09-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/"
+                href="http://hungpt.info/ko/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/"
+                href="http://hungpt.info/en/"
                 />
   </url>
   
   <url>
-    <loc>http://example.org/en/tags/aws/</loc>
+    <loc>http://hungpt.info/en/tags/aws/</loc>
     <lastmod>2022-09-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/create_chart_easy_in_odoo/</loc>
+    <loc>http://hungpt.info/en/posts/create_chart_easy_in_odoo/</loc>
     <lastmod>2022-09-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/scale_group_and_deploy_web_frontend_in_aws/</loc>
+    <loc>http://hungpt.info/en/posts/scale_group_and_deploy_web_frontend_in_aws/</loc>
     <lastmod>2022-09-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/</loc>
+    <loc>http://hungpt.info/en/posts/</loc>
     <lastmod>2022-09-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/posts/"
+                href="http://hungpt.info/ko/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/posts/"
+                href="http://hungpt.info/en/posts/"
                 />
   </url>
   
   <url>
-    <loc>http://example.org/en/tags/</loc>
+    <loc>http://hungpt.info/en/tags/</loc>
     <lastmod>2022-09-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/tags/"
+                href="http://hungpt.info/ko/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/tags/"
+                href="http://hungpt.info/en/tags/"
                 />
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/deploy_nodejd_ec2_s3_in_aws/</loc>
+    <loc>http://hungpt.info/en/posts/deploy_nodejd_ec2_s3_in_aws/</loc>
     <lastmod>2022-09-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/vpn_in_aws/</loc>
+    <loc>http://hungpt.info/en/posts/vpn_in_aws/</loc>
     <lastmod>2022-09-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/vpc_in_aws/</loc>
+    <loc>http://hungpt.info/en/posts/vpc_in_aws/</loc>
     <lastmod>2022-09-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/aws_lab_1/</loc>
+    <loc>http://hungpt.info/en/posts/aws_lab_1/</loc>
     <lastmod>2022-09-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/k8s_la_gi_part1/</loc>
+    <loc>http://hungpt.info/en/posts/k8s_la_gi_part1/</loc>
     <lastmod>2022-08-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/safe_eval_in_odoo/</loc>
+    <loc>http://hungpt.info/en/posts/safe_eval_in_odoo/</loc>
     <lastmod>2022-08-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/tags/devops/</loc>
+    <loc>http://hungpt.info/en/tags/devops/</loc>
     <lastmod>2022-08-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/tags/docker/</loc>
+    <loc>http://hungpt.info/en/tags/docker/</loc>
     <lastmod>2022-08-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/tags/kubernetes/</loc>
+    <loc>http://hungpt.info/en/tags/kubernetes/</loc>
     <lastmod>2022-08-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/tags/linux/</loc>
+    <loc>http://hungpt.info/en/tags/linux/</loc>
     <lastmod>2022-08-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/tags/odoo/</loc>
+    <loc>http://hungpt.info/en/tags/odoo/</loc>
     <lastmod>2022-08-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/use_memo_in_reactjs/</loc>
+    <loc>http://hungpt.info/en/posts/use_memo_in_reactjs/</loc>
     <lastmod>2022-08-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/use_reduce_in_reactjs/</loc>
+    <loc>http://hungpt.info/en/posts/use_reduce_in_reactjs/</loc>
     <lastmod>2022-08-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/use_ref/</loc>
+    <loc>http://hungpt.info/en/posts/use_ref/</loc>
     <lastmod>2022-08-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/tags/javascript/</loc>
+    <loc>http://hungpt.info/en/tags/javascript/</loc>
     <lastmod>2022-08-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/tags/reactjs/</loc>
+    <loc>http://hungpt.info/en/tags/reactjs/</loc>
     <lastmod>2022-08-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/use_effect_part3/</loc>
+    <loc>http://hungpt.info/en/posts/use_effect_part3/</loc>
     <lastmod>2022-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/use_effect_part4/</loc>
+    <loc>http://hungpt.info/en/posts/use_effect_part4/</loc>
     <lastmod>2022-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/placeholder-text/</loc>
+    <loc>http://hungpt.info/en/posts/placeholder-text/</loc>
     <lastmod>2022-07-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/use_effect/</loc>
+    <loc>http://hungpt.info/en/posts/use_effect/</loc>
     <lastmod>2022-07-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/use_effect_part2/</loc>
+    <loc>http://hungpt.info/en/posts/use_effect_part2/</loc>
     <lastmod>2022-07-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/javascript-array-reduce/</loc>
+    <loc>http://hungpt.info/en/posts/javascript-array-reduce/</loc>
     <lastmod>2022-07-09T10:12:07+07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/odoo-javascript-programming-tutorial-part-two-widget-logic/</loc>
+    <loc>http://hungpt.info/en/posts/odoo-javascript-programming-tutorial-part-two-widget-logic/</loc>
     <lastmod>2022-07-07T14:15:33+07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/odoo-javascript-programming-tutorial-part-one-create-widget-view/</loc>
+    <loc>http://hungpt.info/en/posts/odoo-javascript-programming-tutorial-part-one-create-widget-view/</loc>
     <lastmod>2022-07-07T11:22:29+07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/su-dung-usestate-hook-trong-react-nhu-nao-cho-dung/</loc>
+    <loc>http://hungpt.info/en/posts/su-dung-usestate-hook-trong-react-nhu-nao-cho-dung/</loc>
     <lastmod>2022-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/kien-thuc-javascript-co-ban-can-phai-biet-truoc-khi-hoc-react-native-reactjs/</loc>
+    <loc>http://hungpt.info/en/posts/kien-thuc-javascript-co-ban-can-phai-biet-truoc-khi-hoc-react-native-reactjs/</loc>
     <lastmod>2022-07-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/nhung-loi-co-ban-trong-lap-trinh-ma-developer-nen-tranh/</loc>
+    <loc>http://hungpt.info/en/posts/nhung-loi-co-ban-trong-lap-trinh-ma-developer-nen-tranh/</loc>
     <lastmod>2022-07-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/publication/article/</loc>
+    <loc>http://hungpt.info/en/publication/article/</loc>
     <lastmod>2020-03-05T14:08:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/publication/book/</loc>
+    <loc>http://hungpt.info/en/publication/book/</loc>
     <lastmod>2020-03-05T14:08:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/publication/misc/</loc>
+    <loc>http://hungpt.info/en/publication/misc/</loc>
     <lastmod>2020-03-05T14:08:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/publication/</loc>
+    <loc>http://hungpt.info/en/publication/</loc>
     <lastmod>2020-03-05T14:08:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/showcase/hugo/</loc>
+    <loc>http://hungpt.info/en/showcase/hugo/</loc>
     <lastmod>2020-01-19T21:04:11+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/showcase/</loc>
+    <loc>http://hungpt.info/en/showcase/</loc>
     <lastmod>2020-01-19T15:43:38+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/gallery/cartoon/</loc>
+    <loc>http://hungpt.info/en/gallery/cartoon/</loc>
     <lastmod>2019-10-31T10:20:16+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/gallery/cartoon/"
+                href="http://hungpt.info/ko/gallery/cartoon/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/gallery/cartoon/"
+                href="http://hungpt.info/en/gallery/cartoon/"
                 />
   </url>
   
   <url>
-    <loc>http://example.org/en/gallery/</loc>
+    <loc>http://hungpt.info/en/gallery/</loc>
     <lastmod>2019-10-31T10:20:16+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/gallery/"
+                href="http://hungpt.info/ko/gallery/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/gallery/"
+                href="http://hungpt.info/en/gallery/"
                 />
   </url>
   
   <url>
-    <loc>http://example.org/en/gallery/photo/</loc>
+    <loc>http://hungpt.info/en/gallery/photo/</loc>
     <lastmod>2019-10-31T10:20:16+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/gallery/photo/"
+                href="http://hungpt.info/ko/gallery/photo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/gallery/photo/"
+                href="http://hungpt.info/en/gallery/photo/"
                 />
   </url>
   
   <url>
-    <loc>http://example.org/en/presentation/dir/fourth/</loc>
+    <loc>http://hungpt.info/en/presentation/dir/fourth/</loc>
     <lastmod>2019-10-30T20:48:10+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/presentation/</loc>
+    <loc>http://hungpt.info/en/presentation/</loc>
     <lastmod>2019-10-30T20:48:10+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/presentation/third/</loc>
+    <loc>http://hungpt.info/en/presentation/third/</loc>
     <lastmod>2019-10-30T20:46:30+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/presentation/second/</loc>
+    <loc>http://hungpt.info/en/presentation/second/</loc>
     <lastmod>2019-10-30T20:45:24+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/presentation/first/</loc>
+    <loc>http://hungpt.info/en/presentation/first/</loc>
     <lastmod>2019-10-30T19:45:20+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/archive/</loc>
+    <loc>http://hungpt.info/en/archive/</loc>
     <lastmod>2019-10-19T11:44:14+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/archive/"
+                href="http://hungpt.info/ko/archive/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/archive/"
+                href="http://hungpt.info/en/archive/"
                 />
   </url>
   
   <url>
-    <loc>http://example.org/en/about/</loc>
+    <loc>http://hungpt.info/en/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/about/"
+                href="http://hungpt.info/ko/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/about/"
+                href="http://hungpt.info/en/about/"
                 />
   </url>
   
   <url>
-    <loc>http://example.org/en/publication/article/article_any_folder_name_1/</loc>
+    <loc>http://hungpt.info/en/publication/article/article_any_folder_name_1/</loc>
     <lastmod>2018-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/publication/book/book_any_folder_name_1/</loc>
+    <loc>http://hungpt.info/en/publication/book/book_any_folder_name_1/</loc>
     <lastmod>2017-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/publication/misc/misc_any_folder_name_1/</loc>
+    <loc>http://hungpt.info/en/publication/misc/misc_any_folder_name_1/</loc>
     <lastmod>2016-11-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/categories/</loc>
+    <loc>http://hungpt.info/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/categories/"
+                href="http://hungpt.info/ko/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/categories/"
+                href="http://hungpt.info/en/categories/"
                 />
   </url>
   
   <url>
-    <loc>http://example.org/en/tags/index/</loc>
+    <loc>http://hungpt.info/en/tags/index/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/tags/index/"
+                href="http://hungpt.info/ko/tags/index/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/tags/index/"
+                href="http://hungpt.info/en/tags/index/"
                 />
   </url>
   
   <url>
-    <loc>http://example.org/en/series/</loc>
+    <loc>http://hungpt.info/en/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/series/"
+                href="http://hungpt.info/ko/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/series/"
+                href="http://hungpt.info/en/series/"
                 />
   </url>
   

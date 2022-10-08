@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Tags on HungPT&#39;s Blog</title>
-    <link>http://example.org/en/tags/</link>
+    <link>http://hungpt.info/en/tags/</link>
     <description>Recent content in Tags on HungPT&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,17 +16,17 @@
     <copyright>©2022, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 30 Sep 2022 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="http://example.org/en/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://hungpt.info/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>AWS</title>
-        <link>http://example.org/en/tags/aws/</link>
+        <link>http://hungpt.info/en/tags/aws/</link>
         <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
         
-        <guid>http://example.org/en/tags/aws/</guid>
+        <guid>http://hungpt.info/en/tags/aws/</guid>
         <description></description>
         
         <dc:creator>Hùng Phạm</dc:creator>
@@ -40,11 +40,11 @@
       
       <item>
         <title>DevOps</title>
-        <link>http://example.org/en/tags/devops/</link>
+        <link>http://hungpt.info/en/tags/devops/</link>
         <pubDate>Sat, 20 Aug 2022 00:00:00 +0000</pubDate>
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
         
-        <guid>http://example.org/en/tags/devops/</guid>
+        <guid>http://hungpt.info/en/tags/devops/</guid>
         <description></description>
         
         <dc:creator>Hùng Phạm</dc:creator>
@@ -58,11 +58,11 @@
       
       <item>
         <title>Docker</title>
-        <link>http://example.org/en/tags/docker/</link>
+        <link>http://hungpt.info/en/tags/docker/</link>
         <pubDate>Sat, 20 Aug 2022 00:00:00 +0000</pubDate>
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
         
-        <guid>http://example.org/en/tags/docker/</guid>
+        <guid>http://hungpt.info/en/tags/docker/</guid>
         <description></description>
         
         <dc:creator>Hùng Phạm</dc:creator>
@@ -76,11 +76,11 @@
       
       <item>
         <title>Kubernetes</title>
-        <link>http://example.org/en/tags/kubernetes/</link>
+        <link>http://hungpt.info/en/tags/kubernetes/</link>
         <pubDate>Sat, 20 Aug 2022 00:00:00 +0000</pubDate>
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
         
-        <guid>http://example.org/en/tags/kubernetes/</guid>
+        <guid>http://hungpt.info/en/tags/kubernetes/</guid>
         <description></description>
         
         <dc:creator>Hùng Phạm</dc:creator>
@@ -94,11 +94,11 @@
       
       <item>
         <title>Linux</title>
-        <link>http://example.org/en/tags/linux/</link>
+        <link>http://hungpt.info/en/tags/linux/</link>
         <pubDate>Sat, 20 Aug 2022 00:00:00 +0000</pubDate>
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
         
-        <guid>http://example.org/en/tags/linux/</guid>
+        <guid>http://hungpt.info/en/tags/linux/</guid>
         <description></description>
         
         <dc:creator>Hùng Phạm</dc:creator>
@@ -112,11 +112,11 @@
       
       <item>
         <title>Odoo</title>
-        <link>http://example.org/en/tags/odoo/</link>
+        <link>http://hungpt.info/en/tags/odoo/</link>
         <pubDate>Sat, 20 Aug 2022 00:00:00 +0000</pubDate>
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
         
-        <guid>http://example.org/en/tags/odoo/</guid>
+        <guid>http://hungpt.info/en/tags/odoo/</guid>
         <description></description>
         
         <dc:creator>Hùng Phạm</dc:creator>
@@ -130,11 +130,11 @@
       
       <item>
         <title>Javascript</title>
-        <link>http://example.org/en/tags/javascript/</link>
+        <link>http://hungpt.info/en/tags/javascript/</link>
         <pubDate>Tue, 16 Aug 2022 00:00:00 +0000</pubDate>
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
         
-        <guid>http://example.org/en/tags/javascript/</guid>
+        <guid>http://hungpt.info/en/tags/javascript/</guid>
         <description></description>
         
         <dc:creator>Hùng Phạm</dc:creator>
@@ -148,11 +148,11 @@
       
       <item>
         <title>ReactJS</title>
-        <link>http://example.org/en/tags/reactjs/</link>
+        <link>http://hungpt.info/en/tags/reactjs/</link>
         <pubDate>Tue, 16 Aug 2022 00:00:00 +0000</pubDate>
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
         
-        <guid>http://example.org/en/tags/reactjs/</guid>
+        <guid>http://hungpt.info/en/tags/reactjs/</guid>
         <description></description>
         
         <dc:creator>Hùng Phạm</dc:creator>
@@ -166,11 +166,11 @@
       
       <item>
         <title>index</title>
-        <link>http://example.org/en/tags/index/</link>
+        <link>http://hungpt.info/en/tags/index/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
         
-        <guid>http://example.org/en/tags/index/</guid>
+        <guid>http://hungpt.info/en/tags/index/</guid>
         <description></description>
         
         <dc:creator>Hùng Phạm</dc:creator>
