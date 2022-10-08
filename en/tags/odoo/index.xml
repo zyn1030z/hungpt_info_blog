@@ -32,7 +32,7 @@ Nếu bạn đọc mã nguồn của Odoo, bạn sẽ thấy rằng, safe_eval t
 Nếu bạn không biết, module eval được sử dụng để xử lý các biểu thức với kiểu dữ liệu là chuỗi, để chúng có thể được đọc dưới dạng</description>
         
         <dc:creator>Hung pham</dc:creator>
-        
+        <media:content url="https://hungpt.info/images/feature4/img_2.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -58,7 +58,7 @@ Tiếp theo bạn cần khai báo 1 trường như sau:
 field_one = fields.Integer(&#39;Field One&#39;) Thông thường khi chúng ta khai báo 1 field như trên và thêm chúng vào XML, mặc định Odoo sẽ cho chúng ta sửa giá trị trên giao diện kiểu như sau:</description>
         
         <dc:creator>Hung Pham</dc:creator>
-        
+        <media:content url="https://hungpt.info/images/feature4/img_9.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -88,7 +88,7 @@ Hầu như tất cả logic được viết với python, ngoại trừ khi tùy
 Đối với những lập trình viên odoo, theo cá nhân mình thấy thì javascript là phần cuối cùng mà bạn nên học. Tốt hơn hết bạn nên lập trung code với python</description>
         
         <dc:creator>Hung Pham</dc:creator>
-        
+        <media:content url="https://hungpt.info/images/feature4/img_9.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

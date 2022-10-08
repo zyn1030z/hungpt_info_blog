@@ -33,7 +33,7 @@ Trong quá trình làm việc với React, chúng ta sẽ có lựa chọn như:
 1. memo trong ReactJS mình có 1 đoạn code đơn giản như sau</description>
         
         <dc:creator>Hung pham</dc:creator>
-        
+        <media:content url="https://hungpt.info/images/feature4/img_3.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -61,7 +61,7 @@ Trong quá trình làm việc với React, chúng ta sẽ có lựa chọn như:
         <description></description>
         
         <dc:creator>Hung pham</dc:creator>
-        
+        <media:content url="https://hungpt.info/images/feature4/img_4.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -92,7 +92,7 @@ Vậy useRef được sử dụng khi nào? Và mục đích sử dụng của h
 import {useState, useEffect, useRef} from &amp;quot;react&amp;quot;; function Content() { const [number, setNumber] = useState(9000) const handle_start = () =&amp;gt; { setInterval(() =&amp;gt; { setNumber(preNumber =&amp;gt; preNumber - 1) },100) } const handle_stop = () =&amp;gt; { } return ( &amp;lt;div&amp;gt; &amp;lt;div style={ {&#39;fontSize&#39;: &#39;100px&#39;} }&amp;gt; {number} &amp;lt;/div&amp;gt; &amp;lt;div&amp;gt; &amp;lt;button onClick={handle_start} &amp;gt;Start&amp;lt;/button&amp;gt; &amp;lt;button onClick={handle_stop} &amp;gt;Stop&amp;lt;/button&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; ) } export default Content; Giao diện đơn giản nó sẽ như thế này 😄</description>
         
         <dc:creator>Hung pham</dc:creator>
-        
+        <media:content url="https://hungpt.info/images/feature4/img_5.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -121,7 +121,7 @@ import {useState, useEffect, useRef} from &amp;quot;react&amp;quot;; function Co
  Cách listen DOMEvent trong React component Vấn để xảy ra khi chúng ta listen DOM Event là gì? Cách khắc phục vấn đề nàymột  Trong phần này, chúng ta phải nắm vững kiến thức Javascript cơ bản đó là listen DOM Event bạn có thể tham khảo tài liệu tại đây Listen DOM Event</description>
         
         <dc:creator>Hung pham</dc:creator>
-        
+        <media:content url="https://hungpt.info/images/feature4/img_6.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -150,7 +150,7 @@ import {useState, useEffect, useRef} from &amp;quot;react&amp;quot;; function Co
 Ở đây mình sẽ không tạo web socket server mà mình sẽ đi fake ra những bình luận</description>
         
         <dc:creator>Hung pham</dc:creator>
-        
+        <media:content url="https://hungpt.info/images/feature4/img_6.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -180,7 +180,7 @@ này nó khó mà vì để có thể sử dụng được hook này đòi hỏi
 nếu bạn đi vào đây học quá nhanh hoặc quên mất kiến thức nền thì học sẽ bị khó.</description>
         
         <dc:creator>Hung pham</dc:creator>
-        
+        <media:content url="https://hungpt.info/images/feature4/img_6.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -210,7 +210,7 @@ phần này chúng ta sẽ tìm hiểu rõ hơn.
 Để có thể xử lý vấn đề api call liên tục k dừng ở phần 1, bạn chỉ cần thêm tham số thứ 2 trong useEffect có thể là 1 mảng rỗng []</description>
         
         <dc:creator>Hung pham</dc:creator>
-        
+        <media:content url="https://hungpt.info/images/feature4/img_6.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -238,7 +238,7 @@ phần này chúng ta sẽ tìm hiểu rõ hơn.
         <description>&lt;p&gt;Để quản lý State trong React Function Component, chúng ta dùng Hook useState().&lt;/p&gt;</description>
         
         <dc:creator>Hung Pham</dc:creator>
-        
+        <media:content url="https://hungpt.info/images/feature4/img_10.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -266,7 +266,7 @@ phần này chúng ta sẽ tìm hiểu rõ hơn.
         <description>&lt;p&gt;ReactJS là một Javascript framework rất phổ biến với giới lập trình Web Frontend hiện nay, số lượng tuyển dụng lập trình viên ReactJS cũng rất lớn. Do đó nhiều người mới học Web Frontend sau khi học xong một chút HTML CSS JS là muốn nhảy vào lập trình ReactJS ngay. Điều này dẫn đến hệ lụy là các bạn sẽ bị hổng kiến thức cơ bản, hoặc khi học ReactJS sẽ rất chật vật vì không hiểu cú pháp, không hiểu bản chất, …&lt;/p&gt;</description>
         
         <dc:creator>Hung Pham</dc:creator>
-        
+        <media:content url="https://hungpt.info/images/feature4/img_11.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

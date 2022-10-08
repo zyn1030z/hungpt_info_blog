@@ -38,11 +38,6 @@
   </url>
   
   <url>
-    <loc>https://hungpt.info/en/posts/scale_group_and_deploy_web_frontend_in_aws/</loc>
-    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://hungpt.info/en/posts/</loc>
     <lastmod>2022-09-30T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -235,21 +230,6 @@
   <url>
     <loc>https://hungpt.info/en/showcase/</loc>
     <lastmod>2020-01-19T15:43:38+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hungpt.info/en/gallery/cartoon/</loc>
-    <lastmod>2019-10-31T10:20:16+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://hungpt.info/ko/gallery/cartoon/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://hungpt.info/en/gallery/cartoon/"
-                />
   </url>
   
   <url>

@@ -30,31 +30,7 @@
         <description></description>
         
         <dc:creator>Hung Pham</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>AWS</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Hướng dẫn triển khai ứng dụng web front end cho AWS trên EC2 và S3 và scale EC2</title>
-        <link>https://hungpt.info/en/posts/scale_group_and_deploy_web_frontend_in_aws/</link>
-        <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
-        <author>thaihung412@gmail.com (Hùng Phạm)</author>
-        <atom:modified>Fri, 30 Sep 2022 00:00:00 +0000</atom:modified>
-        <guid>https://hungpt.info/en/posts/scale_group_and_deploy_web_frontend_in_aws/</guid>
-        <description></description>
-        
-        <dc:creator>Hung Pham</dc:creator>
-        
+        <media:content url="https://hungpt.info/images/feature4/img2.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -81,7 +57,7 @@ Mô hình triển khai Mình sẽ nói qua chút về mô hình triển khai c�
  Chuẩn bị EC2 đã được cấu hình IAM Rule truy cập S3 Cài đặt NodeJS lên EC2 Lấy code NodeJS truy cập S3 và hiển thị nội dung(danh sách file, ảnh) trong S3 lên web  Chúng ta sẽ đến bài lab ngay bây giờ 😄</description>
         
         <dc:creator>Hung Pham</dc:creator>
-        
+        <media:content url="https://hungpt.info/images/feature4/img1.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -105,7 +81,7 @@ Mô hình triển khai Mình sẽ nói qua chút về mô hình triển khai c�
         <description>Xin chào mọi người. Hôm nay chúng ta sẽ cùng tìm hiểu về VPN trong AWS.</description>
         
         <dc:creator>Hung Pham</dc:creator>
-        
+        <media:content url="https://hungpt.info/images/feature4/img3.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -132,7 +108,7 @@ logic mà bạn xác định.
 Bạn có toàn quyền kiểm soát môi trường mạng ảo của mình, bao gồm lựa chọn dải địa chỉ IP, tạo các mạng con,</description>
         
         <dc:creator>Hung Pham</dc:creator>
-        
+        <media:content url="https://hungpt.info/images/feature4/img4.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -158,7 +134,7 @@ Chắc hẳn khi mới bắt đầu tìm hiểu về Amazon Web Services, IAM l�
 1.IAM (Identity and Access Management) là gì? IAM (Identity and Access Management) tạm dịch là &amp;ldquo;Quản lý truy cập và nhận dạng&amp;rdquo; là một dịch vụ web giúp bạn kiểm soát</description>
         
         <dc:creator>Hung Pham</dc:creator>
-        
+        <media:content url="https://hungpt.info/images/feature4/img.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -182,7 +158,7 @@ Chắc hẳn khi mới bắt đầu tìm hiểu về Amazon Web Services, IAM l�
         <description>Mình sẽ quay trở lại sớm với loại bài về K8s nhé 😄&amp;hellip;</description>
         
         <dc:creator>Hung pham</dc:creator>
-        
+        <media:content url="https://hungpt.info/images/feature4/img_1.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
