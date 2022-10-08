@@ -1729,9 +1729,9 @@ lưu ở S3 trên AWS nhé!</p>
 <p>Trước hết mình đã tạo 1 VPC, với subnet public và subnet private ở bài trước, bạn có thể đọc lại bài VPC trong AWS của mình</p>
 <h4 id="bước-1-tạo-ec2-s3-bucket-với-giao-diện-aws-console">Bước 1: Tạo EC2, S3 Bucket với giao diện AWS Console</h4>
 <p>Chúng ta lần lượt tạo EC2 và S3 Bucket như sau:</p>
-<p><img src="/img_20.png" alt="" /><br />
+<p><img src="/images/img_20.png" alt="" /><br />
 chú ý ở bước tạo Network setting chúng ta sẽ chọn VPC public mà chúng ta tạo ở bài trước</p>
-<p><img src="/img_21.png" alt="" /><br />
+<p><img src="/images/img_21.png" alt="" /><br />
 Các bước khác bạn làm tương tự như bài hướng dẫn về EC2</p>
 <p>Tiếp theo mình sẽ tạo 1 S3 Bucket, nếu bạn chưa biết S3 Bucket là gì thì S3 Bucket là dịch vụ đám mây lưu trữ do đó bạn có thể tải lên các tệp, các tài liệu,<br />
 các dữ liệu tải về của người dùng hoặc các bản sao lưu.</p>
@@ -1744,14 +1744,14 @@ Với mỗi bucket, bạn có thể điều khiển việc truy xuất đến n�
 <li>Chú ý là mỗi một tài khoản chỉ tạo được tối đa là 100 buckets, và Bucket có tên là duy nhất</li>
 </ul>
 <p>Mình sẽ tạo 1 S3 Bucket như sau:<br />
-<img src="/img_22.png" alt="" /></p>
+<img src="/images/img_22.png" alt="" /></p>
 <p>Bạn cần bỏ tích chọn mục này<br />
-<img src="/img_23.png" alt="" /></p>
+<img src="/images/img_23.png" alt="" /></p>
 <h4 id="bước-2-tạo-iam-role">Bước 2: Tạo IAM Role</h4>
 <p>Tạo 1 rule cho phép EC2 truy cập S3 như sau<br />
-<img src="/img_24.png" alt="" /></p>
+<img src="/images/img_24.png" alt="" /></p>
 <h4 id="bước-3-chỉnh-sửa-bucket-policy">Bước 3: Chỉnh sửa Bucket Policy</h4>
-<p><img src="/img_25.png" alt="" /></p>
+<p><img src="/images/img_25.png" alt="" /></p>
 <h4 id="bước-4-kiểm-tra-ec2-truy-cập-s3-mà-không-cần-lưu-trữ-usekeypass">Bước 4: Kiểm tra EC2 truy cập S3 mà không cần lưu trữ use/key/pass</h4>
 <h3 id="2-cài-đặt-nodejs-lên-ec2">2. Cài đặt NodeJS lên EC2</h3>
 <p>Bạn có thể deploy ứng dựng Nodejs từ sourecode sau</p>

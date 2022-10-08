@@ -1757,7 +1757,7 @@ function Content() {
 
 export default Content;
 </code></pre><p>Giao diện đơn giản nó sẽ như thế này 😄<br />
-<img src="/img_11.png" alt="" /></p>
+<img src="/images/img_11.png" alt="" /></p>
 <p>Bài toán mình sẽ đi giải quyết ở đây là sau khi bấm nút stop thì ứng dụng đếm số sẽ ngừng lại tại con số hiện thời. Chúng ta đã setInterval ở button start,<br />
 vậy để stop chúng ta chỉ cần clearInterval ở button stop thôi. Nhưng function clearInterval() nhận đối số truyền vào là ID hiện thời</p>
 <p>Cách đơn giản là chúng ta sẽ thêm 1 biến là <em><strong>timeID</strong></em> và truyền cho giá trị mỗi khi setState lại như sau:</p>
@@ -1800,7 +1800,7 @@ function Content() {
 
 export default Content;
 </code></pre><p>Nhưng bài toán vẫn chưa được giải quyết? Chúng ta thử xem log timeID hiển thị trước và sau thế nào nhé!<br />
-<img src="/img_12.png" alt="" /><br />
+<img src="/images/img_12.png" alt="" /><br />
 Vậy là biến timeID không được lưu lại? Tại sao lại như vậy? Đó là bởi vì biến <em><strong>timeID</strong></em> của chúng ta nằm trong component và mỗi khi state thay đổi component<br />
 sẽ render lại dẫn đến biến *** timeID*** sẽ được set lại giá trị lại.</p>
 <p>Để giải quyết định vấn đề này chúng ta có thể cho biến <em><strong>timeID</strong></em> ra ngoài function component, khi đó, bài toán của chúng ta sẽ được giải quyết</p>

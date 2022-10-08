@@ -1721,7 +1721,7 @@
 Tiếp theo bạn cần khai báo 1 trường như sau:</p>
 <pre><code>field_one = fields.Integer('Field One')
 </code></pre><p>Thông thường khi chúng ta khai báo 1 field như trên và thêm chúng vào XML, mặc định Odoo sẽ cho chúng ta sửa giá trị trên giao diện kiểu như sau:<br />
-<img src="/img_field_default.png" alt="" /><br />
+<img src="/images/img_field_default.png" alt="" /><br />
 Nhưng để có thể hạn chế thêm việc người dùng nhập vào không phải ký tự là số nguyên, ở đây mình sẽ thêm 2 nút tăng giảm <strong>+ -</strong> và trường giá trị để readonly.<br />
 Dưới đây là đoạn code:</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -1748,7 +1748,7 @@ Dưới đây là đoạn code:</p>
  
 &lt;/template&gt;
 </code></pre><p>Trong form ở chế độ chỉnh sửa sẽ như sau:<br />
-<img src="/img_edit_widget.png" alt="" /><br />
+<img src="/images/img_edit_widget.png" alt="" /><br />
 Sau đó, ở file widget_one.js mình sẽ tiến hành thêm event với 2 button là <strong>+-</strong>, dưới đây là đoạn code:</p>
 <pre><code>var WidgetOne = AbstractField.extend({
     template: 'WidgetOneTemplate', // fill with the template name that will be rendered by odoo
@@ -1776,7 +1776,7 @@ biến mà chúng ta truyền vào hàm <strong>_setValue</strong> phải là st
 chuỗi string và tự động chuyển sang integer để cộng trừ nhân chia.</p>
 <p>Với đoạn code trên chúng ta cần chú ý <strong>toString()</strong>, tại sao chúng ta lại cần ép kiểu về string? Lý do mình đã giải thích bên trên, đơn giản là chúng ta cần phải ép kiểu<br />
 về như vậy<br />
-<img src="/img_click_not_change_widget.png" alt="" /><br />
+<img src="/images/img_click_not_change_widget.png" alt="" /><br />
 Oh, nhưng khoan đã! Tại sao giá trị field của chúng ta vẫn là 0 và không hề thay đổi.</p>
 <p>Điều này chỉ ra rằng, khi chúng ta thực hiện thay đổi giá trị của field thì giao diện không tự động render lại.<br />
 Để có thể làm được điều này chúng ta cần phải override lại phương thức <strong>_render</strong> hoặc <strong>_renderEdit</strong>. Trong ví dụ của chúng ta, mình sẽ override lại hàm <strong>_render</strong>.</p>
@@ -1816,9 +1816,9 @@ Oh, nhưng khoan đã! Tại sao giá trị field của chúng ta vẫn là 0 v�
 });
 </code></pre><p>Tham số đầu tiên mà mình truyền vào <strong>qweb.render()</strong> đó là template mà chúng ta muốn render lại, tham số thứ 2 ở đây chính là widget của chúng ta, khi thay đổi giá trị của field<br />
 ,ở đây là <strong>widget</strong> do chúng ta đã viết nó trong xml như bên dưới:<br />
-<img src="/img_2.png" alt="" /></p>
+<img src="/images/img_2.png" alt="" /></p>
 <p>Restart Odoo, refresh trình duyệt chúng ta thấy rằng mọi thứ đã chạy chính xác!<br />
-<img src="/img_1.png" alt="" /><br />
+<img src="/images/img_1.png" alt="" /><br />
 Đây là phần hai trong loạt bài Javascript trong Odoo, hy vọng bài viết sẽ giúp ích cho bạn 😀</p>
 
     </article>

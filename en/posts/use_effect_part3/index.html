@@ -1773,12 +1773,12 @@ useState mà chúng ta đã tìm hiểu ở các phần trước.</p>
                 &lt;/button&gt;
             )}
 </code></pre><p>Và kết quả sẽ như sau:<br />
-<img src="/img_9.png" alt="" /><br />
+<img src="/images/img_9.png" alt="" /><br />
 Tuy nhiên nếu các bạn để ý thì chúng ta sẽ thấy rằng, nếu chúng ta tiếp tục kéo chuột xuống thì useEffect sẽ liên tục được gọi<br />
 dẫn tới việc liên tục re render lại giao diện? Câu trả lời là không, ReactJS đã giúp chúng ta ngăn chặn việc đó. Có nghĩ là mặc dù hàm trong useEffect được gọi lại liên tục nhưng<br />
 component sẽ không bị re render lại.</p>
 <p>Đến với 1 vấn đề tiếp theo, bây giờ chúng ta thử unmount component rồi mount lại, xong đó kéo chuột xuống, sẽ có 1 thông báo mà ReactJS báo cho chúng ta như sau:<br />
-<img src="/img_10.png" alt="" /><br />
+<img src="/images/img_10.png" alt="" /><br />
 Đó là bởi vì khi component của chúng ta unmount thì Event Listen chúng ta thêm vào chưa được xóa đi, dẫn tới việc khi chúng ta mount lại component thì 1 event<br />
 listen nữa lại được thêm vào, điều này dẫn đến lãng phí tài nguyên, dò rỉ bộ nhớ. Vậy giải pháp ở đây là gì? Đó chính là <em><strong>Cleanup Function</strong></em> và trong callback<br />
 của useEffect các bạn có thể return ra 1 hàm</p>

@@ -1752,7 +1752,7 @@ Hàm đầu tiên mà <em><strong>safe_eval</strong></em> đưa vào danh sách 
 </code></pre><p>Nhưng nếu chuyển biểu thức này sang bên <em><strong>safe_eval</strong></em> thì lại gây ra lỗi:</p>
 <pre><code>safe_eval_value = safe_eval(my_string, {'a': 15, 'b': 2, 'pricision': 0}
 </code></pre><p>Sẽ có lỗi như hình dưới đây<br />
-<img src="/img_14.png" alt="" /></p>
+<img src="/images/img_14.png" alt="" /></p>
 <p>Chúng ta cũng có thể thay đổi chế độ <em><strong>safe_eval</strong></em>, theo mặc định khi chúng ta gọi safe_eval, odoo sẽ thực thi module eval của python.<br />
 Nhưng chúng ta cũng có thể thay thế module eval bằng 1 module khác, ví dụ như đoạn code dưới đây:</p>
 <pre><code>my_string = &quot;c = a + b&quot;
@@ -1774,14 +1774,14 @@ giá trị <em><strong>my_value</strong></em> sẽ không thay đổi.</p>
 module mình có viết ở đây để giới hạn động quyền truy cập nút in.</p>
 <p>Trong module này mình có viết 1 field là <em><strong>condition</strong></em> với kiểu dữ liệu là <em><strong>Char</strong></em>, trong view mình cho hiển thị lên trường này với<br />
 widget là domain mặc định của odoo. Widget này cho mọi người viết domain một cách dễ dàng và domain người dùng nhập vào vẫn được lưu dưới dạng Char<br />
-<img src="/img_15.png" alt="" /></p>
+<img src="/images/img_15.png" alt="" /></p>
 <p>Bởi vì tên miền được lưu dưới dạng Char trong cơ sở dữ liệu, nên tất nhiên chúng ta không thể chuyển tên miền trực tiếp đến phương thức tìm kiếm hoặc<br />
 bất kỳ mật phương thức vào khác được. Vì vậy chúng ta phải thay đổi nó thành 1 domain hợp lệ là 1 <em><strong>List</strong></em>, chúng ta có thể sử dụng điều này bằng cách sử<br />
 dụng <em><strong>safe_eval</strong></em>. Tuy nhiên đối với Odoo, cách convert từ string qua List cũng không nhất quán, như ở trong module <em><strong>coupon</strong></em> việc này<br />
 sử dụng bởi module <em><strong>ast</strong></em> cũng là một module có sẵn trong python.</p>
 <p>Một trường hợp khác mà Odoo sử dụng safe_eval đó là việc tính toán báo cáo lãi lỗ và bảng cân đối kế toán trong Odoo enterprise. Bạn có thể<br />
 tìm thấy nó theo Kế toán &raquo; Cấu hình &raquo;&gt; Báo cáo tài chính &raquo; Lãi lỗ<br />
-<img src="/img_16.png" alt="" /></p>
+<img src="/images/img_16.png" alt="" /></p>
 <p>Mình sẽ ví dụ thêm như sau:</p>
 <pre><code>my_string = 'S00006 + S00007'
 </code></pre><p>Chúng ta sẽ sử lý chuỗi này, lấy nó ra để tính toán cũng như tìm kiếm. Đầu tiên mình sẽ tạo ra 1 class được kế thừa từ lớp <em><strong>Dict</strong></em></p>
