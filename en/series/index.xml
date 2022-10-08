@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Series on HungPT&#39;s Blog</title>
-    <link>https://hungpt.info/en/series/</link>
+    <link>http://hungpt.info/en/series/</link>
     <description>Recent content in Series on HungPT&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -15,7 +15,7 @@
     <webMaster>thaihung412@gmail.com (Hùng Phạm)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
     
-        <atom:link href="https://hungpt.info/en/series/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://hungpt.info/en/series/index.xml" rel="self" type="application/rss+xml" />
     
 
       

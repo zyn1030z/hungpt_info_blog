@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>AWS on HungPT&#39;s Blog</title>
-    <link>https://hungpt.info/en/tags/aws/</link>
+    <link>http://hungpt.info/en/tags/aws/</link>
     <description>Recent content in AWS on HungPT&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,17 +16,17 @@
     <copyright>©2022, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 30 Sep 2022 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://hungpt.info/en/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://hungpt.info/en/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Hướng dẫn triển khai ứng dụng web front end cho AWS trên EC2 và S3 và scale EC2</title>
-        <link>https://hungpt.info/en/posts/create_chart_easy_in_odoo/</link>
+        <link>http://hungpt.info/en/posts/create_chart_easy_in_odoo/</link>
         <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
         <atom:modified>Fri, 30 Sep 2022 00:00:00 +0000</atom:modified>
-        <guid>https://hungpt.info/en/posts/create_chart_easy_in_odoo/</guid>
+        <guid>http://hungpt.info/en/posts/create_chart_easy_in_odoo/</guid>
         <description></description>
         
         <dc:creator>Hung Pham</dc:creator>
@@ -46,11 +46,11 @@
       
       <item>
         <title>Hướng dẫn triển khai ứng dụng web front end cho AWS trên EC2 và S3 và scale EC2</title>
-        <link>https://hungpt.info/en/posts/scale_group_and_deploy_web_frontend_in_aws/</link>
+        <link>http://hungpt.info/en/posts/scale_group_and_deploy_web_frontend_in_aws/</link>
         <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
         <atom:modified>Fri, 30 Sep 2022 00:00:00 +0000</atom:modified>
-        <guid>https://hungpt.info/en/posts/scale_group_and_deploy_web_frontend_in_aws/</guid>
+        <guid>http://hungpt.info/en/posts/scale_group_and_deploy_web_frontend_in_aws/</guid>
         <description></description>
         
         <dc:creator>Hung Pham</dc:creator>
@@ -70,11 +70,11 @@
       
       <item>
         <title>[Dành cho Beginner] Hướng dẫn triển khai ứng dụng NodeJS cho AWS trên EC2 và S3</title>
-        <link>https://hungpt.info/en/posts/deploy_nodejd_ec2_s3_in_aws/</link>
+        <link>http://hungpt.info/en/posts/deploy_nodejd_ec2_s3_in_aws/</link>
         <pubDate>Sat, 24 Sep 2022 00:00:00 +0000</pubDate>
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
         <atom:modified>Sat, 24 Sep 2022 00:00:00 +0000</atom:modified>
-        <guid>https://hungpt.info/en/posts/deploy_nodejd_ec2_s3_in_aws/</guid>
+        <guid>http://hungpt.info/en/posts/deploy_nodejd_ec2_s3_in_aws/</guid>
         <description>Xin chào mọi người. Hôm nay chúng ta sẽ cùng tìm hiểu cách để có thể triển khai 1 ứng dụng NodeJS trên EC2 và thông tin dữ liệu được
 lưu ở S3 trên AWS nhé!
 Mô hình triển khai Mình sẽ nói qua chút về mô hình triển khai của bài Lab này, yêu cầu của bài lab bao gồm:
@@ -97,11 +97,11 @@ Mô hình triển khai Mình sẽ nói qua chút về mô hình triển khai c�
       
       <item>
         <title>[Dành cho Beginner] VPN trong AWS</title>
-        <link>https://hungpt.info/en/posts/vpn_in_aws/</link>
+        <link>http://hungpt.info/en/posts/vpn_in_aws/</link>
         <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
         <atom:modified>Wed, 21 Sep 2022 00:00:00 +0000</atom:modified>
-        <guid>https://hungpt.info/en/posts/vpn_in_aws/</guid>
+        <guid>http://hungpt.info/en/posts/vpn_in_aws/</guid>
         <description>Xin chào mọi người. Hôm nay chúng ta sẽ cùng tìm hiểu về VPN trong AWS.</description>
         
         <dc:creator>Hung Pham</dc:creator>
@@ -121,11 +121,11 @@ Mô hình triển khai Mình sẽ nói qua chút về mô hình triển khai c�
       
       <item>
         <title>[Dành cho Beginner] VPC trong AWS</title>
-        <link>https://hungpt.info/en/posts/vpc_in_aws/</link>
+        <link>http://hungpt.info/en/posts/vpc_in_aws/</link>
         <pubDate>Sun, 18 Sep 2022 00:00:00 +0000</pubDate>
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
         <atom:modified>Sun, 18 Sep 2022 00:00:00 +0000</atom:modified>
-        <guid>https://hungpt.info/en/posts/vpc_in_aws/</guid>
+        <guid>http://hungpt.info/en/posts/vpc_in_aws/</guid>
         <description>Xin chào mọi người. Hôm nay chúng ta sẽ cùng tìm hiểu về VPC (Virtual Private Cloud) trong AWS.
 Tổng quan về VPC Virtual Private Cloud là gì ? Amazon Virtual Private Cloud (Amazon VPC) là dịch vụ cho phép bạn khởi chạy các tài nguyên AWS trong mạng ảo cô lập theo
 logic mà bạn xác định.
@@ -148,11 +148,11 @@ Bạn có toàn quyền kiểm soát môi trường mạng ảo của mình, bao
       
       <item>
         <title>[Dành cho Beginner] IAM trong AWS</title>
-        <link>https://hungpt.info/en/posts/aws_lab_1/</link>
+        <link>http://hungpt.info/en/posts/aws_lab_1/</link>
         <pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate>
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
         <atom:modified>Wed, 14 Sep 2022 00:00:00 +0000</atom:modified>
-        <guid>https://hungpt.info/en/posts/aws_lab_1/</guid>
+        <guid>http://hungpt.info/en/posts/aws_lab_1/</guid>
         <description>Xin chào mọi người. Hôm nay chúng ta sẽ cùng tìm hiểu về IAM (Identity and Access Management) trong AWS.
 Chắc hẳn khi mới bắt đầu tìm hiểu về Amazon Web Services, IAM là một trong những khái niệm mà chúng ta tiếp xúc đầu tiên. Cùng bắt đầu thôi!
 1.IAM (Identity and Access Management) là gì? IAM (Identity and Access Management) tạm dịch là &amp;ldquo;Quản lý truy cập và nhận dạng&amp;rdquo; là một dịch vụ web giúp bạn kiểm soát</description>
@@ -174,11 +174,11 @@ Chắc hẳn khi mới bắt đầu tìm hiểu về Amazon Web Services, IAM l�
       
       <item>
         <title>[K8S] - Phần 1: K8S là gì ?</title>
-        <link>https://hungpt.info/en/posts/k8s_la_gi_part1/</link>
+        <link>http://hungpt.info/en/posts/k8s_la_gi_part1/</link>
         <pubDate>Sat, 20 Aug 2022 00:00:00 +0000</pubDate>
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
         <atom:modified>Sat, 20 Aug 2022 00:00:00 +0000</atom:modified>
-        <guid>https://hungpt.info/en/posts/k8s_la_gi_part1/</guid>
+        <guid>http://hungpt.info/en/posts/k8s_la_gi_part1/</guid>
         <description>Mình sẽ quay trở lại sớm với loại bài về K8s nhé 😄&amp;hellip;</description>
         
         <dc:creator>Hung pham</dc:creator>

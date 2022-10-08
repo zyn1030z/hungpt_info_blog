@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Kubernetes on HungPT&#39;s Blog</title>
-    <link>https://hungpt.info/en/tags/kubernetes/</link>
+    <link>http://hungpt.info/en/tags/kubernetes/</link>
     <description>Recent content in Kubernetes on HungPT&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,17 +16,17 @@
     <copyright>©2022, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 20 Aug 2022 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://hungpt.info/en/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://hungpt.info/en/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>[K8S] - Phần 1: K8S là gì ?</title>
-        <link>https://hungpt.info/en/posts/k8s_la_gi_part1/</link>
+        <link>http://hungpt.info/en/posts/k8s_la_gi_part1/</link>
         <pubDate>Sat, 20 Aug 2022 00:00:00 +0000</pubDate>
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
         <atom:modified>Sat, 20 Aug 2022 00:00:00 +0000</atom:modified>
-        <guid>https://hungpt.info/en/posts/k8s_la_gi_part1/</guid>
+        <guid>http://hungpt.info/en/posts/k8s_la_gi_part1/</guid>
         <description>Mình sẽ quay trở lại sớm với loại bài về K8s nhé 😄&amp;hellip;</description>
         
         <dc:creator>Hung pham</dc:creator>
