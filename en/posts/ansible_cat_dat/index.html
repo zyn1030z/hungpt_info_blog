@@ -1744,7 +1744,7 @@
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Oct 9, 2022 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;2&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;3&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;Hung Pham</span>
   
@@ -1827,9 +1827,19 @@ So sánh một vài thông số về Ansible, SaltStack, Chef, Puppet trên GitH
 </tr>
 </tbody>
 </table>
-<p>Có thể thấy <em><strong>Ansible</strong></em> là công cụ tự động hóa phổ biến nhất trên GitHub với số sao được người dùng bình chọn cho project<br />
+<p>Có thể thấy <em><strong>Ansible</strong></em> là công cụ tự động hóa phổ biến nhất trên GitHub với số sao được người dùng bình chọn cho<br />
+project<br />
 này là 33,500 sao. Ansible cũng là tool dễ tiếp cận và làm quen do được build bằng Python và sử dụng file cấu hình theo<br />
 dạng YAML (YAML Ain’t Markup Language) dễ đọc và dễ hiểu.</p>
+<h3 id="2-kiến-trúc">2. Kiến trúc</h3>
+<p>Ansible sử dụng kiến trúc agentless để giao tiếp với các máy khác mà không cần agent. Cơ bản nhất là giao tiếp thông qua<br />
+giao thức SSH trên Linux, WinRM trên Windows hoặc giao tiếp qua chính API của thiết bị đó cung cấp.<br />
+<img src="/images/feature4/img_30.png" alt="" /><br />
+Ansible có thể giao tiếp với rất nhiều platform, OS và loại thiết bị khác nhau. Từ Ubuntu, CentOS, VMware, Windows cho<br />
+tới AWS, Azure, các thiết bị mạng Cisco và Juniper….vân vân và mây mây….(hoàn toàn không cần agent khi giao tiếp).</p>
+<p>Chính cách thiết kế này làm tăng tính tiện dụng của Ansible do không cần phải setup bảo trì agent trên nhiều host. Có<br />
+thể coi đây là một thế mạnh của Ansible so với các công cụ có cùng chức năng như Chef, Puppet, SaltStack (Salt thì hỗ<br />
+trợ cả 2 mode là agent và agentless, có thời gian thì mình sẽ viết 1 bài về Salt).</p>
     </article>
     
     
@@ -2584,6 +2594,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <li>
       <ul>
         <li><a href="#1-giới-thiệu-ansible">1. Giới thiệu Ansible</a></li>
+        <li><a href="#2-kiến-trúc">2. Kiến trúc</a></li>
       </ul>
     </li>
   </ul>
