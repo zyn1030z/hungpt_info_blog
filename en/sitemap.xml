@@ -14,7 +14,7 @@
   
   <url>
     <loc>https://hungpt.info/en/</loc>
-    <lastmod>2022-10-09T11:22:29+07:00</lastmod>
+    <lastmod>2022-10-09T21:14:42+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -28,18 +28,23 @@
   </url>
   
   <url>
-    <loc>https://hungpt.info/en/posts/aws_amplify_host_cicd/</loc>
-    <lastmod>2022-10-09T11:22:29+07:00</lastmod>
+    <loc>https://hungpt.info/en/posts/ansible_cat_dat/</loc>
+    <lastmod>2022-10-09T21:14:42+07:00</lastmod>
   </url>
   
   <url>
     <loc>https://hungpt.info/en/tags/aws/</loc>
-    <lastmod>2022-10-09T11:22:29+07:00</lastmod>
+    <lastmod>2022-10-09T21:14:42+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hungpt.info/en/tags/devops/</loc>
+    <lastmod>2022-10-09T21:14:42+07:00</lastmod>
   </url>
   
   <url>
     <loc>https://hungpt.info/en/posts/</loc>
-    <lastmod>2022-10-09T11:22:29+07:00</lastmod>
+    <lastmod>2022-10-09T21:14:42+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -54,7 +59,7 @@
   
   <url>
     <loc>https://hungpt.info/en/tags/</loc>
-    <lastmod>2022-10-09T11:22:29+07:00</lastmod>
+    <lastmod>2022-10-09T21:14:42+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -65,6 +70,11 @@
                 hreflang="en"
                 href="https://hungpt.info/en/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://hungpt.info/en/posts/aws_amplify_host_cicd/</loc>
+    <lastmod>2022-10-09T11:22:29+07:00</lastmod>
   </url>
   
   <url>
@@ -99,11 +109,6 @@
   
   <url>
     <loc>https://hungpt.info/en/posts/safe_eval_in_odoo/</loc>
-    <lastmod>2022-08-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hungpt.info/en/tags/devops/</loc>
     <lastmod>2022-08-20T00:00:00+00:00</lastmod>
   </url>
   
