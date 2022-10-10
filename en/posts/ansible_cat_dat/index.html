@@ -1398,7 +1398,7 @@
     "datePublished": "2022-10-09T21:14:42+07:00",
     "dateModified": "2022-10-09T21:14:42+07:00",
     "url" : "https://hungpt.info/en/posts/ansible_cat_dat/",
-    "description": "\u003cp\u003eTrong một môi trường với nhiều server thì ta sẽ có vô vàn thứ phải lo. Từ setup crontab, update các gói phần mềm mới,\u003cbr /\u003e deploy ứng dụng mới, chỉnh sửa file cấu hình…. Những …\u003c/p\u003e",
+    "description": "\u003cp\u003eTrong một môi trường với nhiều server thì ta sẽ có vô vàn thứ phải lo. Từ setup crontab, update các gói phần mềm mới, deploy ứng dụng mới, chỉnh sửa file cấu hình…. Những …\u003c/p\u003e",
     "keywords": ["AWS","CI/CD","Devops"],
     "image" : "https://hungpt.info/images/feature4/img_28.png",
     "author": {
@@ -1770,20 +1770,14 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <p>Trong một môi trường với nhiều server thì ta sẽ có vô vàn thứ phải lo. Từ setup crontab, update các gói phần mềm mới,<br />
-deploy ứng dụng mới, chỉnh sửa file cấu hình…. Những công việc này tuy không khó, nhưng rất mất thời gian của những<br />
-người quản trị (SysAdmin/SysEngineer/DevOps).</p>
-<p>Vậy có cách nào để tự động hóa những thao tác nhàm chán, lặp đi lặp lại<br />
-này không?<br />
+      <p>Trong một môi trường với nhiều server thì ta sẽ có vô vàn thứ phải lo. Từ setup crontab, update các gói phần mềm mới, deploy ứng dụng mới, chỉnh sửa file cấu hình…. Những công việc này tuy không khó, nhưng rất mất thời gian của những người quản trị (SysAdmin/SysEngineer/DevOps).</p>
+<p>Vậy có cách nào để tự động hóa những thao tác nhàm chán, lặp đi lặp lại này không?<br />
 “Cùng một việc mà làm quá 2 lần thì có gì đó không ổn rồi”<br />
 Từ một giảng viên cũ từng dạy mình</p>
-<p>Câu trả lời chính là ứng dụng những tool automation để quản trị hệ thống. Hiện nay có rất nhiều tool như vậy trên thị<br />
-trường cụ thể như: Chef, Puppet, CFEngine, StackStorm, Ansible, SaltStack… Trong bài này, mình sẽ giới thiệu đến các bạn<br />
-một công cụ rất mạnh mẽ trong việc quản trị hệ thống, đó chính là Ansible.<br />
+<p>Câu trả lời chính là ứng dụng những tool automation để quản trị hệ thống. Hiện nay có rất nhiều tool như vậy trên thị trường cụ thể như: Chef, Puppet, CFEngine, StackStorm, Ansible, SaltStack… Trong bài này, mình sẽ giới thiệu đến các bạn một công cụ rất mạnh mẽ trong việc quản trị hệ thống, đó chính là Ansible.<br />
 <img src="/images/feature4/img_29.png" alt="" /></p>
 <h3 id="1-giới-thiệu-ansible">1. Giới thiệu Ansible</h3>
-<p>Như đã nói ở trên, Ansible là một công cụ dùng để tự động hóa việc cấu hình trên nhiều server. So với các công cụ khác<br />
-với tính năng tương đương thì Ansible dễ học và dễ tiếp cận hơn rất nhiều. Cộng đồng người dùng cũng nhiều hơn so với<br />
+<p>Như đã nói ở trên, Ansible là một công cụ dùng để tự động hóa việc cấu hình trên nhiều server. So với các công cụ khác với tính năng tương đương thì Ansible dễ học và dễ tiếp cận hơn rất nhiều. Cộng đồng người dùng cũng nhiều hơn so với<br />
 các công cụ khác.<br />
 So sánh một vài thông số về Ansible, SaltStack, Chef, Puppet trên GitHub (11/2018)</p>
 <table>
@@ -1827,35 +1821,24 @@ So sánh một vài thông số về Ansible, SaltStack, Chef, Puppet trên GitH
 </tr>
 </tbody>
 </table>
-<p>Có thể thấy <em><strong>Ansible</strong></em> là công cụ tự động hóa phổ biến nhất trên GitHub với số sao được người dùng bình chọn cho<br />
-project<br />
-này là 33,500 sao. Ansible cũng là tool dễ tiếp cận và làm quen do được build bằng Python và sử dụng file cấu hình theo<br />
-dạng YAML (YAML Ain’t Markup Language) dễ đọc và dễ hiểu.</p>
+<p>Có thể thấy <em><strong>Ansible</strong></em> là công cụ tự động hóa phổ biến nhất trên GitHub với số sao được người dùng bình chọn cho project này là 33,500 sao. Ansible cũng là tool dễ tiếp cận và làm quen do được build bằng Python và sử dụng file cấu hình theo dạng YAML (YAML Ain’t Markup Language) dễ đọc và dễ hiểu.</p>
 <h3 id="2-kiến-trúc">2. Kiến trúc</h3>
-<p>Ansible sử dụng kiến trúc agentless để giao tiếp với các máy khác mà không cần agent. Cơ bản nhất là giao tiếp thông qua<br />
-giao thức SSH trên Linux, WinRM trên Windows hoặc giao tiếp qua chính API của thiết bị đó cung cấp.<br />
+<p>Ansible sử dụng kiến trúc agentless để giao tiếp với các máy khác mà không cần agent. Cơ bản nhất là giao tiếp thông qua giao thức SSH trên Linux, WinRM trên Windows hoặc giao tiếp qua chính API của thiết bị đó cung cấp.<br />
 <img src="/images/feature4/img_30.png" alt="" /><br />
-Ansible có thể giao tiếp với rất nhiều platform, OS và loại thiết bị khác nhau. Từ Ubuntu, CentOS, VMware, Windows cho<br />
-tới AWS, Azure, các thiết bị mạng Cisco và Juniper….vân vân và mây mây….(hoàn toàn không cần agent khi giao tiếp).</p>
-<p>Chính cách thiết kế này làm tăng tính tiện dụng của Ansible do không cần phải setup bảo trì agent trên nhiều host. Có<br />
-thể coi đây là một thế mạnh của Ansible so với các công cụ có cùng chức năng như Chef, Puppet, SaltStack (Salt thì hỗ<br />
-trợ cả 2 mode là agent và agentless, có thời gian thì mình sẽ viết 1 bài về Salt).</p>
+Ansible có thể giao tiếp với rất nhiều platform, OS và loại thiết bị khác nhau. Từ Ubuntu, CentOS, VMware, Windows cho tới AWS, Azure, các thiết bị mạng Cisco và Juniper….vân vân và mây mây….(hoàn toàn không cần agent khi giao tiếp).</p>
+<p>Chính cách thiết kế này làm tăng tính tiện dụng của Ansible do không cần phải setup bảo trì agent trên nhiều host. Có thể coi đây là một thế mạnh của Ansible so với các công cụ có cùng chức năng như Chef, Puppet, SaltStack (Salt thì hỗ trợ cả 2 mode là agent và agentless, có thời gian thì mình sẽ viết 1 bài về Salt).</p>
 <h3 id="3-ứng-dụng">3. Ứng dụng</h3>
 <p>Ansible có rất nhiều ứng dụng trong triển khai phần mềm và quản trị hệ thống.</p>
 <ul>
-<li>Provisioning: Khởi tạo VM, container hàng loạt trong môi trường cloud dựa trên API (OpenStack, AWS, Google Cloud,<br />
-Azure…)</li>
-<li>Configuration Management: Quản lý cấu hình tập trung các dịch vụ tập trung, không cần phải tốn công chỉnh sửa cấu hình<br />
-trên từng server.</li>
-<li>Application Deployment: Deploy ứng dụng hàng loạt, quản lý hiệu quả vòng đời của ứng dụng từ giai đoạn dev cho tới<br />
-production.</li>
+<li>Provisioning: Khởi tạo VM, container hàng loạt trong môi trường cloud dựa trên API (OpenStack, AWS, Google Cloud, Azure…)</li>
+<li>Configuration Management: Quản lý cấu hình tập trung các dịch vụ tập trung, không cần phải tốn công chỉnh sửa cấu hình trên từng server.</li>
+<li>Application Deployment: Deploy ứng dụng hàng loạt, quản lý hiệu quả vòng đời của ứng dụng từ giai đoạn dev cho tới production.</li>
 <li>Security &amp; Compliance: Quản lý các chính sách về an toàn thông tinmột cách đồng bộ trên nhiều môi trường và sản phẩm<br />
 khác nhau (deploy policy, cấu hình firewall hàng loạt trên nhiều server…).</li>
 </ul>
 <h3 id="4-cài-đặt-ansiable">4. Cài đặt Ansiable</h3>
 <h5 id="bước-1-tạo-ec2">Bước 1: Tạo EC2</h5>
-<p>Trên AWS tạo <em><strong>03 Launch template</strong></em> cho EC2 sử dụng AMI: Amazon Linux 2, Ubuntu 20, RedHat. Chú ý <em><strong>Advanced network<br />
-configuration</strong></em> chọn <em><strong>Auto IP Public: Enable</strong></em></p>
+<p>Trên AWS tạo <em><strong>03 Launch template</strong></em> cho EC2 sử dụng AMI: Amazon Linux 2, Ubuntu 20, RedHat. Chú ý <em><strong>Advanced network configuration</strong></em> chọn <em><strong>Auto IP Public: Enable</strong></em></p>
 <p>&hellip;còn nữa 😄</p>
     </article>
     
