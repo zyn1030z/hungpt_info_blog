@@ -60,9 +60,7 @@
         <atom:modified>Sun, 09 Oct 2022 11:22:29 +0700</atom:modified>
         <guid>https://hungpt.info/en/posts/aws_amplify_host_cicd/</guid>
         <description>&lt;h3 id=&#34;aws-amplify-là-gì&#34;&gt;AWS Amplify là gì?&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;AWS Amplify&lt;/strong&gt;&lt;/em&gt; là một tập hợp các công cụ và tính năng được tạo ra có chủ đích, giúp nhà phát triển web và di động&lt;br /&gt;
-frontend xây dựng các ứng dụng fullstack một cách nhanh chóng và dễ dàng trên AWS với khả năng tận dụng linh hoạt các&lt;br /&gt;
-dịch vụ AWS phong phú khi các trường hợp sử dụng của bạn tiến triển.&lt;/p&gt;</description>
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;AWS Amplify&lt;/strong&gt;&lt;/em&gt; là một tập hợp các công cụ và tính năng được tạo ra có chủ đích, giúp nhà phát triển web và di động frontend xây dựng các ứng dụng fullstack một cách nhanh chóng và dễ dàng trên AWS với khả năng tận dụng linh hoạt các dịch vụ AWS phong phú khi các trường hợp sử dụng của bạn tiến triển.&lt;/p&gt;</description>
         
         <dc:creator>Hung Pham</dc:creator>
         <media:content url="https://hungpt.info/images/feature4/img_13.png" medium="image"><media:title type="html">featured image</media:title></media:content>
