@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>[Dành cho Beginner] Ansible Là Gì? Hướng Dẫn Cài Đặt Ansible – HungPT&#39;s Blog</title>
+    <title>[Dành cho Beginner] Ansible Là Gì? Hướng Dẫn Cài Đặt Ansible? Viết 1 Playbook đơn giản – HungPT&#39;s Blog</title>
     
 
 
@@ -1345,7 +1345,7 @@
 
 
 <meta property="og:site_name" content="HungPT&#39;s Blog">
-<meta property="og:title" content="[Dành cho Beginner] Ansible Là Gì? Hướng Dẫn Cài Đặt Ansible">
+<meta property="og:title" content="[Dành cho Beginner] Ansible Là Gì? Hướng Dẫn Cài Đặt Ansible? Viết 1 Playbook đơn giản">
 <meta property="og:url" content="https://hungpt.info/en/posts/ansible_cat_dat/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="Từ coder đến developer-HungPT&#39;s Blog.">
@@ -1355,7 +1355,7 @@
     <meta property="og:image:url" content="https://hungpt.info/images/feature4/img_28.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:app:name:iphone" content="HungPT&#39;s Blog">
-    <meta property="twitter:title" content="[Dành cho Beginner] Ansible Là Gì? Hướng Dẫn Cài Đặt Ansible">
+    <meta property="twitter:title" content="[Dành cho Beginner] Ansible Là Gì? Hướng Dẫn Cài Đặt Ansible? Viết 1 Playbook đơn giản">
     <meta property="twitter:description" content="Từ coder đến developer-HungPT&#39;s Blog.">
   
 
@@ -1394,7 +1394,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "[Dành cho Beginner] Ansible Là Gì? Hướng Dẫn Cài Đặt Ansible",
+    "headline": "[Dành cho Beginner] Ansible Là Gì? Hướng Dẫn Cài Đặt Ansible? Viết 1 Playbook đơn giản",
     "datePublished": "2022-10-09T21:14:42+07:00",
     "dateModified": "2022-10-09T21:14:42+07:00",
     "url" : "https://hungpt.info/en/posts/ansible_cat_dat/",
@@ -1725,7 +1725,7 @@
   
   <li  class="is-active" >
     
-      <span>[Dành cho Beginner] Ansible Là Gì? Hướng Dẫn Cài Đặt Ansible</span>
+      <span>[Dành cho Beginner] Ansible Là Gì? Hướng Dẫn Cài Đặt Ansible? Viết 1 Playbook đơn giản</span>
     
   </li>
   
@@ -1737,7 +1737,7 @@
   <div class="single ">
     <div class="single__nojs">This page looks best with JavaScript enabled</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">[Dành cho Beginner] Ansible Là Gì? Hướng Dẫn Cài Đặt Ansible</h2>
+    <h2 class="single__title" data-ani="true">[Dành cho Beginner] Ansible Là Gì? Hướng Dẫn Cài Đặt Ansible? Viết 1 Playbook đơn giản</h2>
     <h3 class="single__subtitle"></h3>
     <div class="single__meta">
       
@@ -1838,8 +1838,33 @@ khác nhau (deploy policy, cấu hình firewall hàng loạt trên nhiều serve
 </ul>
 <h3 id="4-cài-đặt-ansiable">4. Cài đặt Ansiable</h3>
 <h5 id="bước-1-tạo-ec2">Bước 1: Tạo EC2</h5>
-<p>Trên AWS tạo <em><strong>03 Launch template</strong></em> cho EC2 sử dụng AMI: Amazon Linux 2, Ubuntu 20, RedHat. Chú ý <em><strong>Advanced network configuration</strong></em> chọn <em><strong>Auto IP Public: Enable</strong></em></p>
-<p>&hellip;còn nữa 😄</p>
+<p>Trên AWS tạo <em><strong>03 Launch template</strong></em> cho EC2 sử dụng AMI: Amazon Linux 2, Ubuntu 20, RedHat. Chú ý <em><strong>Advanced network configuration</strong></em> chọn <em><strong>Auto IP Public: Enable</strong></em><br />
+<img src="/images/feature4/img_32.png" alt="" /></p>
+<p>Tiến hành ssh vào EC2 ubuntu<br />
+<img src="/images/feature4/img_33.png" alt="" /></p>
+<p>Tạo 1 thư mục, trong thư mục đó chúng ta sẽ tạo 1 file host để lưu ip của 2 máy EC2 còn lại như sau<br />
+<img src="/images/feature4/img_34.png" alt="" /></p>
+<p>Sau đó chúng ta chạy lệnh</p>
+<pre><code>ansible -i hosts webserver -m ping
+</code></pre><p>Sẽ có 1 lỗi như sau bởi chúng ta chưa có private key để ssh vào 2 máy EC2 còn lại<br />
+<img src="/images/feature4/img_35.png" alt="" /></p>
+<p>Chúng ta sẽ phải tải file lên máy EC2 ubuntu này với lệnh sau:</p>
+<pre><code class="language-angular2html" data-lang="angular2html">scp -i web1.pem web1.pem ubuntu@16.162.23.244:/home/ubuntu/.ssh
+</code></pre><p><img src="/images/feature4/img_36.png" alt="" /></p>
+<p>Bạn lần lượt gõ 2 lệnh này để convert file pem thành private key và tạo public key để ssh tới 2 máy EC2 còn lại<br />
+<img src="/images/feature4/img_37.png" alt="" /></p>
+<p>Nếu vẫn chưa được bạn sẽ phải thêm <em><strong>ansible_ssh_user=ec2-user</strong></em><br />
+<img src="/images/feature4/img_38.png" alt="" /></p>
+<p>Chạy lệnh sau chúng ta sẽ được kết quả<br />
+<img src="/images/feature4/img_39.png" alt="" /></p>
+<p>Tiếp theo chúng ta sẽ thao tác với playbook trong Ansible, chúng ta sẽ viết 1 playbook đơn giản như sau:</p>
+<pre><code class="language-angular2html" data-lang="angular2html">- hosts: webserver
+  tasks:
+    - ping:
+</code></pre><p>Sau đó chúng ta chạy lệnh sau với playbook.yml là file chúng ta sẽ viết code ở trên</p>
+<pre><code class="language-angular2html" data-lang="angular2html">ansible-playbook -i hosts playbook.yaml
+</code></pre><p>Kết quả chúng ta sẽ được như sau:<br />
+<img src="/images/feature4/img_40.png" alt="" /></p>
     </article>
     
     
@@ -2044,7 +2069,7 @@ khác nhau (deploy policy, cấu hình firewall hàng loạt trên nhiều serve
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=%5bD%c3%a0nh%20cho%20Beginner%5d%20Ansible%20L%c3%a0%20G%c3%ac%3f%20H%c6%b0%e1%bb%9bng%20D%e1%ba%abn%20C%c3%a0i%20%c4%90%e1%ba%b7t%20Ansible&url=https%3a%2f%2fhungpt.info%2fen%2fposts%2fansible_cat_dat%2f&hashtags=AWS%2cCI%2fCD%2cDevops&via=Hung%20Pham" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=%5bD%c3%a0nh%20cho%20Beginner%5d%20Ansible%20L%c3%a0%20G%c3%ac%3f%20H%c6%b0%e1%bb%9bng%20D%e1%ba%abn%20C%c3%a0i%20%c4%90%e1%ba%b7t%20Ansible%3f%20Vi%e1%ba%bft%201%20Playbook%20%c4%91%c6%a1n%20gi%e1%ba%a3n&url=https%3a%2f%2fhungpt.info%2fen%2fposts%2fansible_cat_dat%2f&hashtags=AWS%2cCI%2fCD%2cDevops&via=Hung%20Pham" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
