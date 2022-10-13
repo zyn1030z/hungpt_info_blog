@@ -14,7 +14,7 @@
   
   <url>
     <loc>https://hungpt.info/en/</loc>
-    <lastmod>2022-10-10T23:42:40+07:00</lastmod>
+    <lastmod>2022-10-13T21:14:42+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -24,6 +24,56 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://hungpt.info/en/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://hungpt.info/en/posts/bien_trong_ansible/</loc>
+    <lastmod>2022-10-13T21:14:42+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hungpt.info/en/tags/ansible/</loc>
+    <lastmod>2022-10-13T21:14:42+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hungpt.info/en/tags/aws/</loc>
+    <lastmod>2022-10-13T21:14:42+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hungpt.info/en/tags/devops/</loc>
+    <lastmod>2022-10-13T21:14:42+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hungpt.info/en/posts/</loc>
+    <lastmod>2022-10-13T21:14:42+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://hungpt.info/ko/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hungpt.info/en/posts/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://hungpt.info/en/tags/</loc>
+    <lastmod>2022-10-13T21:14:42+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://hungpt.info/ko/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hungpt.info/en/tags/"
                 />
   </url>
   
@@ -43,52 +93,12 @@
   </url>
   
   <url>
-    <loc>https://hungpt.info/en/posts/</loc>
-    <lastmod>2022-10-10T23:42:40+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://hungpt.info/ko/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://hungpt.info/en/posts/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://hungpt.info/en/tags/</loc>
-    <lastmod>2022-10-10T23:42:40+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://hungpt.info/ko/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://hungpt.info/en/tags/"
-                />
-  </url>
-  
-  <url>
     <loc>https://hungpt.info/en/posts/owl-odoo-web-library-part-1/</loc>
     <lastmod>2022-10-10T23:42:40+07:00</lastmod>
   </url>
   
   <url>
     <loc>https://hungpt.info/en/posts/ansible_cat_dat/</loc>
-    <lastmod>2022-10-09T21:14:42+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hungpt.info/en/tags/aws/</loc>
-    <lastmod>2022-10-09T21:14:42+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hungpt.info/en/tags/devops/</loc>
     <lastmod>2022-10-09T21:14:42+07:00</lastmod>
   </url>
   

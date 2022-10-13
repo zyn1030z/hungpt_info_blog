@@ -14,11 +14,65 @@
     <managingEditor>thaihung412@gmail.com (Hùng Phạm)</managingEditor>
     <webMaster>thaihung412@gmail.com (Hùng Phạm)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 10 Oct 2022 23:42:40 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 13 Oct 2022 21:14:42 +0700</lastBuildDate>
     
         <atom:link href="https://hungpt.info/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Ansible</title>
+        <link>https://hungpt.info/en/tags/ansible/</link>
+        <pubDate>Thu, 13 Oct 2022 21:14:42 +0700</pubDate>
+        <author>thaihung412@gmail.com (Hùng Phạm)</author>
+        
+        <guid>https://hungpt.info/en/tags/ansible/</guid>
+        <description></description>
+        
+        <dc:creator>Hùng Phạm</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>AWS</title>
+        <link>https://hungpt.info/en/tags/aws/</link>
+        <pubDate>Thu, 13 Oct 2022 21:14:42 +0700</pubDate>
+        <author>thaihung412@gmail.com (Hùng Phạm)</author>
+        
+        <guid>https://hungpt.info/en/tags/aws/</guid>
+        <description></description>
+        
+        <dc:creator>Hùng Phạm</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Devops</title>
+        <link>https://hungpt.info/en/tags/devops/</link>
+        <pubDate>Thu, 13 Oct 2022 21:14:42 +0700</pubDate>
+        <author>thaihung412@gmail.com (Hùng Phạm)</author>
+        
+        <guid>https://hungpt.info/en/tags/devops/</guid>
+        <description></description>
+        
+        <dc:creator>Hùng Phạm</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>Javascript</title>
@@ -63,42 +117,6 @@
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
         
         <guid>https://hungpt.info/en/tags/owl/</guid>
-        <description></description>
-        
-        <dc:creator>Hùng Phạm</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>AWS</title>
-        <link>https://hungpt.info/en/tags/aws/</link>
-        <pubDate>Sun, 09 Oct 2022 21:14:42 +0700</pubDate>
-        <author>thaihung412@gmail.com (Hùng Phạm)</author>
-        
-        <guid>https://hungpt.info/en/tags/aws/</guid>
-        <description></description>
-        
-        <dc:creator>Hùng Phạm</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Devops</title>
-        <link>https://hungpt.info/en/tags/devops/</link>
-        <pubDate>Sun, 09 Oct 2022 21:14:42 +0700</pubDate>
-        <author>thaihung412@gmail.com (Hùng Phạm)</author>
-        
-        <guid>https://hungpt.info/en/tags/devops/</guid>
         <description></description>
         
         <dc:creator>Hùng Phạm</dc:creator>
