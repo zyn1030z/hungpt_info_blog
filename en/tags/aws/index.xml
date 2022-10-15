@@ -14,11 +14,47 @@
     <managingEditor>thaihung412@gmail.com (Hùng Phạm)</managingEditor>
     <webMaster>thaihung412@gmail.com (Hùng Phạm)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 13 Oct 2022 21:14:42 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 16 Oct 2022 21:14:42 +0700</lastBuildDate>
     
         <atom:link href="https://hungpt.info/en/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>[Dành cho Beginner] Phần 3: Template trong Ansible</title>
+        <link>https://hungpt.info/en/posts/template_in_ansible/</link>
+        <pubDate>Sun, 16 Oct 2022 21:14:42 +0700</pubDate>
+        <author>thaihung412@gmail.com (Hùng Phạm)</author>
+        <atom:modified>Sun, 16 Oct 2022 21:14:42 +0700</atom:modified>
+        <guid>https://hungpt.info/en/posts/template_in_ansible/</guid>
+        <description>&lt;p&gt;Trước tiên chúng ta hãy cùng nói lại về khái niệm Template trong &lt;em&gt;&lt;strong&gt;Ansible&lt;/strong&gt;&lt;/em&gt; và tại sao chúng ta phải dùng nó&lt;/p&gt;</description>
+        
+        <dc:creator>Hung Pham</dc:creator>
+        <media:content url="https://hungpt.info/images/feature1/img_5.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>AWS</category>
+            
+          
+            
+              <category>CI/CD</category>
+            
+          
+            
+              <category>Devops</category>
+            
+          
+            
+              <category>Ansible</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>[Dành cho Beginner] Phần 2: Biến trong Ansible</title>
