@@ -14,16 +14,34 @@
     <managingEditor>thaihung412@gmail.com (Hùng Phạm)</managingEditor>
     <webMaster>thaihung412@gmail.com (Hùng Phạm)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 16 Oct 2022 21:34:42 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 17 Oct 2022 21:34:42 +0700</lastBuildDate>
     
         <atom:link href="https://hungpt.info/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
+        <title>Javascript</title>
+        <link>https://hungpt.info/en/tags/javascript/</link>
+        <pubDate>Mon, 17 Oct 2022 21:34:42 +0700</pubDate>
+        <author>thaihung412@gmail.com (Hùng Phạm)</author>
+        
+        <guid>https://hungpt.info/en/tags/javascript/</guid>
+        <description></description>
+        
+        <dc:creator>Hùng Phạm</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
         <title>Odoo</title>
         <link>https://hungpt.info/en/tags/odoo/</link>
-        <pubDate>Sun, 16 Oct 2022 21:34:42 +0700</pubDate>
+        <pubDate>Mon, 17 Oct 2022 21:34:42 +0700</pubDate>
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
         
         <guid>https://hungpt.info/en/tags/odoo/</guid>
@@ -81,24 +99,6 @@
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
         
         <guid>https://hungpt.info/en/tags/devops/</guid>
-        <description></description>
-        
-        <dc:creator>Hùng Phạm</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Javascript</title>
-        <link>https://hungpt.info/en/tags/javascript/</link>
-        <pubDate>Mon, 10 Oct 2022 23:42:40 +0700</pubDate>
-        <author>thaihung412@gmail.com (Hùng Phạm)</author>
-        
-        <guid>https://hungpt.info/en/tags/javascript/</guid>
         <description></description>
         
         <dc:creator>Hùng Phạm</dc:creator>

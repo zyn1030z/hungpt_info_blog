@@ -14,7 +14,7 @@
   
   <url>
     <loc>https://hungpt.info/en/</loc>
-    <lastmod>2022-10-16T21:34:42+07:00</lastmod>
+    <lastmod>2022-10-17T21:34:42+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -28,13 +28,18 @@
   </url>
   
   <url>
+    <loc>https://hungpt.info/en/tags/javascript/</loc>
+    <lastmod>2022-10-17T21:34:42+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hungpt.info/en/tags/odoo/</loc>
-    <lastmod>2022-10-16T21:34:42+07:00</lastmod>
+    <lastmod>2022-10-17T21:34:42+07:00</lastmod>
   </url>
   
   <url>
     <loc>https://hungpt.info/en/posts/</loc>
-    <lastmod>2022-10-16T21:34:42+07:00</lastmod>
+    <lastmod>2022-10-17T21:34:42+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -48,8 +53,13 @@
   </url>
   
   <url>
+    <loc>https://hungpt.info/en/posts/how_to_use_select2_lib_in_odoo/</loc>
+    <lastmod>2022-10-17T21:34:42+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hungpt.info/en/tags/</loc>
-    <lastmod>2022-10-16T21:34:42+07:00</lastmod>
+    <lastmod>2022-10-17T21:34:42+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -90,11 +100,6 @@
   <url>
     <loc>https://hungpt.info/en/posts/bien_trong_ansible/</loc>
     <lastmod>2022-10-13T21:14:42+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hungpt.info/en/tags/javascript/</loc>
-    <lastmod>2022-10-10T23:42:40+07:00</lastmod>
   </url>
   
   <url>
