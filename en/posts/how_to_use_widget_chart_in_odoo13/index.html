@@ -2206,9 +2206,7 @@ Bước đầu tiên chúng ta sẽ tạo ra 1 <em><strong>ir.actions.server</st
             }
             this.$el.empty();
             this.$el.append($canvas);
-            console.log('this.value', this.value)
             var config = JSON.parse(this.value);
-            console.log('config', config)
             this.chart = new Chart($canvas,config)
             return this._super.apply(this, arguments);
         },
