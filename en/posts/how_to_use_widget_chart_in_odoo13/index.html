@@ -2128,7 +2128,7 @@ Dưới đây là đoạn code ví dụ:</p>
 });
 </code></pre><p>dưới đây là kết quả:<br />
 <img src="/images/feature1/img_13.png" alt="" /></p>
-<h3 id="2-xây-dựng-1-widget-mới">2. Xây dựng 1 widget mới</h3>
+<h3 id="2-truyền-dữ-liệu-từ-field-vào-widget-dashboard">2. Truyền dữ liệu từ field vào widget dashboard</h3>
 <p><img src="/images/feature1/img_7.png" alt="" /><br />
 Bước đầu tiên chúng ta sẽ tạo ra 1 <em><strong>ir.actions.server</strong></em> mục đích để khi chúng ta bấm vào <em><strong>chart_dashboard</strong></em>, chúng ta sẽ truyền giá trị tương ứng vào view thông qua hàm python viết trong <em><strong>ir.actions.server</strong></em></p>
 <p>Đây là đoạn code view cơ bản mình đã viết trong đó record có id là <em><strong>chart_dashboard</strong></em> sẽ là dashboard mà chúng ta cần xử lý trong bài viết lần này</p>
@@ -2168,7 +2168,19 @@ Bước đầu tiên chúng ta sẽ tạo ra 1 <em><strong>ir.actions.server</st
                   sequence=&quot;1&quot;/&gt;
     &lt;/data&gt;
 &lt;/odoo&gt;
-</code></pre>
+</code></pre><p>ở phần 1, dữ liệu mình truyền vào widget là trong file js, tuy nhiên thực tế, chúng ta sẽ truyền từ python qua. Cụ thể mình sẽ viết 1 field compute, trả về giá trị như mình truyền vào file js bên trên như sau:</p>
+<pre><code class="language-angular2html" data-lang="angular2html">{
+    type: &quot;doughnut&quot;,
+    data: {
+        datasets: [{
+            backgroundColor: &quot;black&quot;,
+            data: [0, 10, 20, 30, 40]
+        }]
+    },
+    options: {
+    }
+}
+</code></pre><p>Chúng ta có thể lấy được giá trị của field từ hàm <em><strong>_render</strong></em> thông qua biến <em><strong>this.value</strong></em>, khi lấy được giá trị field rồi, chúng ta sẽ chỉnh sửa để cho vào js trong widget</p>
     </article>
     
     
@@ -2942,7 +2954,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <li>
       <ul>
         <li><a href="#1thư-viện-chart-odoo">1.Thư viện Chart Odoo</a></li>
-        <li><a href="#2-xây-dựng-1-widget-mới">2. Xây dựng 1 widget mới</a></li>
+        <li><a href="#2-truyền-dữ-liệu-từ-field-vào-widget-dashboard">2. Truyền dữ liệu từ field vào widget dashboard</a></li>
       </ul>
     </li>
   </ul>
