@@ -1744,7 +1744,7 @@
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Oct 16, 2022 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;7&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;8&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;Hung Pham</span>
   
@@ -2181,6 +2181,38 @@ Bước đầu tiên chúng ta sẽ tạo ra 1 <em><strong>ir.actions.server</st
     }
 }
 </code></pre><p>Chúng ta có thể lấy được giá trị của field từ hàm <em><strong>_render</strong></em> thông qua biến <em><strong>this.value</strong></em>, khi lấy được giá trị field rồi, chúng ta sẽ chỉnh sửa để cho vào js trong widget</p>
+<p>Chúng ta sẽ tạo 1 field và viết hàm compute cho nó như sau:</p>
+<pre><code class="language-angular2html" data-lang="angular2html">value6 = fields.Text(compute=&quot;_compute_value_6&quot;)
+</code></pre><pre><code class="language-angular2html" data-lang="angular2html">def _compute_value_6(self):
+    for rc in self:
+        rc.value6 = json.dumps({
+            'type': &quot;doughnut&quot;,
+            'data': {
+                'datasets': [{
+                    'backgroundColor': &quot;black&quot;,
+                    'data': [0, 10, 20, 30, 40]
+                }]
+            },
+            'options': {}
+        })
+</code></pre><p>Trong hàm <em><strong>_render</strong></em>, chúng ta thử log gía trị <em><strong>this.value</strong></em> xem nó trả ra gì nhé!<br />
+<img src="/images/feature1/img_14.png" alt="" /></p>
+<p>Chúng ta chỉ cần sửa hàm <em><strong>_render</strong></em> như sau, chúng ta sẽ có kết quả hiển thị biểu đồ tương tự:</p>
+<pre><code class="language-angular2html" data-lang="angular2html"> _render: function () {
+            var self = this;
+            var $canvas = $('&lt;canvas/&gt;');
+            if (this.chart) {
+                this.chart.destroy();
+            }
+            this.$el.empty();
+            this.$el.append($canvas);
+            console.log('this.value', this.value)
+            var config = JSON.parse(this.value);
+            console.log('config', config)
+            this.chart = new Chart($canvas,config)
+            return this._super.apply(this, arguments);
+        },
+</code></pre><p>Bài viết về dashboard trong Odoo của mình cũng dừng lại ở đây, hẹn mọi người vào những bài viết tiếp theo nhé!</p>
     </article>
     
     
