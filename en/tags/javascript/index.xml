@@ -27,7 +27,7 @@
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
         <atom:modified>Mon, 17 Oct 2022 21:34:42 +0700</atom:modified>
         <guid>https://hungpt.info/en/posts/how_to_use_select2_lib_in_odoo/</guid>
-        <description></description>
+        <description>Trong bài viết lần này, mình sẽ sử dụng thư viện Select2 để làm một ô search tương tự như hình dưới đây</description>
         
         <dc:creator>Hung Pham</dc:creator>
         <media:content url="https://hungpt.info/images/feature1/img_15.png" medium="image"><media:title type="html">featured image</media:title></media:content>

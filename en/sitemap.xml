@@ -14,7 +14,7 @@
   
   <url>
     <loc>https://hungpt.info/en/</loc>
-    <lastmod>2022-10-17T21:34:42+07:00</lastmod>
+    <lastmod>2022-10-20T21:34:42+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -28,18 +28,18 @@
   </url>
   
   <url>
-    <loc>https://hungpt.info/en/tags/javascript/</loc>
-    <lastmod>2022-10-17T21:34:42+07:00</lastmod>
+    <loc>https://hungpt.info/en/tags/go/</loc>
+    <lastmod>2022-10-20T21:34:42+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hungpt.info/en/tags/odoo/</loc>
-    <lastmod>2022-10-17T21:34:42+07:00</lastmod>
+    <loc>https://hungpt.info/en/tags/golang/</loc>
+    <lastmod>2022-10-20T21:34:42+07:00</lastmod>
   </url>
   
   <url>
     <loc>https://hungpt.info/en/posts/</loc>
-    <lastmod>2022-10-17T21:34:42+07:00</lastmod>
+    <lastmod>2022-10-20T21:34:42+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -53,13 +53,8 @@
   </url>
   
   <url>
-    <loc>https://hungpt.info/en/posts/how_to_use_select2_lib_in_odoo/</loc>
-    <lastmod>2022-10-17T21:34:42+07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://hungpt.info/en/tags/</loc>
-    <lastmod>2022-10-17T21:34:42+07:00</lastmod>
+    <lastmod>2022-10-20T21:34:42+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -73,6 +68,41 @@
   </url>
   
   <url>
+    <loc>https://hungpt.info/en/posts/api_golang_with_postgresql_part1/</loc>
+    <lastmod>2022-10-20T21:34:42+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hungpt.info/en/tags/ansible/</loc>
+    <lastmod>2022-10-18T21:34:42+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hungpt.info/en/posts/deploy_app_nodejs_from_gitlab/</loc>
+    <lastmod>2022-10-18T21:34:42+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hungpt.info/en/tags/devops/</loc>
+    <lastmod>2022-10-18T21:34:42+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hungpt.info/en/tags/javascript/</loc>
+    <lastmod>2022-10-17T21:34:42+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hungpt.info/en/tags/odoo/</loc>
+    <lastmod>2022-10-17T21:34:42+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hungpt.info/en/posts/how_to_use_select2_lib_in_odoo/</loc>
+    <lastmod>2022-10-17T21:34:42+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hungpt.info/en/posts/how_to_use_widget_chart_in_odoo13/</loc>
     <lastmod>2022-10-16T21:34:42+07:00</lastmod>
   </url>
@@ -83,17 +113,7 @@
   </url>
   
   <url>
-    <loc>https://hungpt.info/en/tags/ansible/</loc>
-    <lastmod>2022-10-16T21:14:42+07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://hungpt.info/en/tags/aws/</loc>
-    <lastmod>2022-10-16T21:14:42+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hungpt.info/en/tags/devops/</loc>
     <lastmod>2022-10-16T21:14:42+07:00</lastmod>
   </url>
   
