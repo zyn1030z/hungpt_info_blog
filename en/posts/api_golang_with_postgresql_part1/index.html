@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Viết API sử dụng Fiber Framework &#43; Postgresql trong Go (phần 1) – HungPT&#39;s Blog</title>
+    <title>Viết API sử dụng Fiber Framework &#43; Postgresql trong Go – HungPT&#39;s Blog</title>
     
 
 
@@ -1345,7 +1345,7 @@
 
 
 <meta property="og:site_name" content="HungPT&#39;s Blog">
-<meta property="og:title" content="Viết API sử dụng Fiber Framework &#43; Postgresql trong Go (phần 1)">
+<meta property="og:title" content="Viết API sử dụng Fiber Framework &#43; Postgresql trong Go">
 <meta property="og:url" content="https://hungpt.info/en/posts/api_golang_with_postgresql_part1/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="Từ coder đến developer">
@@ -1355,7 +1355,7 @@
     <meta property="og:image:url" content="https://hungpt.info/images/feature1/img_18.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:app:name:iphone" content="HungPT&#39;s Blog">
-    <meta property="twitter:title" content="Viết API sử dụng Fiber Framework &#43; Postgresql trong Go (phần 1)">
+    <meta property="twitter:title" content="Viết API sử dụng Fiber Framework &#43; Postgresql trong Go">
     <meta property="twitter:description" content="Từ coder đến developer">
   
 
@@ -1394,11 +1394,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "Viết API sử dụng Fiber Framework + Postgresql trong Go (phần 1)",
+    "headline": "Viết API sử dụng Fiber Framework + Postgresql trong Go",
     "datePublished": "2022-10-20T21:34:42+07:00",
     "dateModified": "2022-10-20T21:34:42+07:00",
     "url" : "https://hungpt.info/en/posts/api_golang_with_postgresql_part1/",
-    "description": "",
+    "description": "\u003ch3 id=\"fiber-là-gì\"\u003eFiber là gì?\u003c/h3\u003e \u003cp\u003eFiber là một khung web lấy cảm hứng từ Express Web Framewok của NodeJs được xây dựng trên Fasthttp, công cụ HTTP nhanh nhất dành cho Go.\u003c/p\u003e",
     "keywords": ["Go","Golang"],
     "image" : "https://hungpt.info/images/feature1/img_18.png",
     "author": {
@@ -1749,7 +1749,7 @@ if (!doNotTrack) {
   
   <li  class="is-active" >
     
-      <span>Viết API sử dụng Fiber Framework &#43; Postgresql trong Go (phần 1)</span>
+      <span>Viết API sử dụng Fiber Framework &#43; Postgresql trong Go</span>
     
   </li>
   
@@ -1761,14 +1761,14 @@ if (!doNotTrack) {
   <div class="single ">
     <div class="single__nojs">This page looks best with JavaScript enabled</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">Viết API sử dụng Fiber Framework &#43; Postgresql trong Go (phần 1)</h2>
+    <h2 class="single__title" data-ani="true">Viết API sử dụng Fiber Framework &#43; Postgresql trong Go</h2>
     <h3 class="single__subtitle"></h3>
     <div class="single__meta">
       
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Oct 20, 2022 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;0&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;5&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;Hung Pham</span>
   
@@ -1792,7 +1792,512 @@ if (!doNotTrack) {
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      
+      <h3 id="fiber-là-gì">Fiber là gì?</h3>
+<p>Fiber là một khung web lấy cảm hứng từ Express Web Framewok của NodeJs được xây dựng trên Fasthttp, công cụ HTTP nhanh nhất dành cho Go.</p>
+<p>Được thiết kế để dễ dàng mọi thứ nhằm phát triển nhanh chóng mà không cần lưu ý đến hiệu suất và phân bổ bộ nhớ.</p>
+<h3 id="các-tính-năng-của-fiber-framework">Các tính năng của Fiber Framework</h3>
+<ul>
+<li>Robust routing / Định tuyến mạnh mẽ</li>
+<li>Serve static files / Cung cấp các tệp tĩnh</li>
+<li>Extreme performance . Hiệu suất cực cao</li>
+<li>Low memory footprint / Sử dụng bộ nhớ thấp</li>
+<li>API endpoints / Điểm cuối API</li>
+<li>Middleware &amp; Next support</li>
+<li>Rapid server-side programming / Lập trình phía máy chủ nhanh chóng</li>
+<li>Template engines / Công cụ mẫu</li>
+<li>Hỗ trợ WebSocket</li>
+<li>Rate Limiter / Giới hạn tỷ lệ</li>
+<li>Được dịch sang 15 ngôn ngữ</li>
+<li>Và nhiều hơn nữa…</li>
+</ul>
+<h3 id="set-up-the-project">Set up the Project</h3>
+<h6 id="1tạo-thư-mục">1.Tạo thư mục</h6>
+<pre><code class="language-angular2html" data-lang="angular2html">$ mkdir Gofiber
+
+$ cd Gofiber
+</code></pre><h6 id="2-khởi-tạo-project">2. Khởi tạo project</h6>
+<pre><code class="language-angular2html" data-lang="angular2html">$ go mod init github.com/&lt;your GitHub username&gt;/Gofiber
+</code></pre><h6 id="3-tạo-các-thư-mục-cần-thiết">3. Tạo các thư mục cần thiết</h6>
+<pre><code class="language-angular2html" data-lang="angular2html">$ mkdir service storage models
+</code></pre><h3 id="install-the-required-libraries">Install the Required Libraries</h3>
+<h6 id="1cài-đặt-gofiber">1.Cài đặt Gofiber</h6>
+<pre><code class="language-angular2html" data-lang="angular2html">$ go get -u github.com/gofiber/fiber/v2
+</code></pre><h6 id="2-cài-đặt-gorm">2. Cài đặt Gorm</h6>
+<pre><code class="language-angular2html" data-lang="angular2html">$ go get -u gorm.io/gorm
+</code></pre><h6 id="3-install-gorm-postgres-driver">3. Install Gorm Postgres driver.</h6>
+<pre><code class="language-angular2html" data-lang="angular2html">$ go get -u gorm.io/driver/postgres
+</code></pre><h6 id="4-install-godotenv-used-for-loading-environment-variables">4. Install Godotenv, used for loading environment variables.</h6>
+<pre><code class="language-angular2html" data-lang="angular2html">$ go get github.com/joho/godotenv
+</code></pre><h6 id="5-install-validator">5. Install Validator.</h6>
+<pre><code class="language-angular2html" data-lang="angular2html">$ go get github.com/go-playground/validator/v10
+</code></pre><h3 id="cài-đặt-database">Cài đặt database</h3>
+<h6 id="1-chuyển-sang-user-postgres-để-thao-tác">1. Chuyển sang user postgres để thao tác</h6>
+<pre><code class="language-angular2html" data-lang="angular2html">$ sudo -iu postgres psql
+</code></pre><h6 id="2-khởi-tạo-database">2. Khởi tạo database</h6>
+<pre><code class="language-angular2html" data-lang="angular2html">CREATE DATABASE gofiber;
+</code></pre><h6 id="3-exit">3. Exit</h6>
+<pre><code class="language-angular2html" data-lang="angular2html">\q
+</code></pre><h6 id="4-khởi-tạo-file-env-và-paste-cấu-hình-sau">4. Khởi tạo file .env và paste cấu hình sau</h6>
+<pre><code class="language-angular2html" data-lang="angular2html">DB_HOST=localhost
+
+DB_PORT=5432
+
+DB_USER=yourusername
+
+DB_PASS=yourpassword
+
+DB_NAME=gofiber
+
+DB_SSLMODE=disable
+</code></pre><h5 id="5-tạo-file-postgresgo-và-paste-đoạn-code-sau">5. Tạo file postgres.go và paste đoạn code sau</h5>
+<pre><code class="language-angular2html" data-lang="angular2html">package storage
+
+
+
+import (
+
+    &quot;fmt&quot;
+
+    &quot;gorm.io/driver/postgres&quot;
+
+    &quot;gorm.io/gorm&quot;
+
+)
+
+
+
+type Config struct {
+
+    Host     string
+
+    Port     string
+
+    Password string
+
+    User     string
+
+    DBName   string
+
+    SSLMode  string
+
+}
+
+
+
+func NewConnection(config *Config) (*gorm.DB, error) {
+
+    dsn := fmt.Sprintf(
+
+        &quot;host=%s port=%s user=%s password=%s dbname=%s sslmode=%s&quot;,
+
+        config.Host, config.Port, config.User, config.Password, config.DBName, config.SSLMode,
+
+    )
+
+    db, err := gorm.Open(postgres.Open(dsn), &amp;gorm.Config{})
+
+    if err != nil {
+
+        return db, err
+    }
+    return db, nil
+}
+</code></pre><h3 id="tạo-model">Tạo model</h3>
+<p>Chúng ta sẽ tạo 1 folder <em><strong>models</strong></em> và tạo 1 file mới là books.go</p>
+<pre><code class="language-angular2html" data-lang="angular2html">package models
+import &quot;gorm.io/gorm&quot;
+type Books struct {
+    ID        uint    `gorm:&quot;primary key;autoIncrement&quot; json:&quot;id&quot;`
+
+    Author    *string `json:&quot;author&quot;`
+
+    Title     *string `json:&quot;title&quot;`
+
+    Publisher *string `json:&quot;publisher&quot;`
+}
+func MigrateBooks(db *gorm.DB) error {
+    err := db.AutoMigrate(&amp;Books{})
+    return err
+}
+</code></pre><h3 id="tạo-service">Tạo service</h3>
+<p>Mục đích để chúng ta xây dựng 1 cầu nối đứng giữa để kết nối tới Database</p>
+<pre><code class="language-angular2html" data-lang="angular2html">type Book struct {
+
+    Author    string `json:&quot;author&quot; validate:&quot;required&quot;`
+
+    Title     string `json:&quot;title&quot; validate:&quot;required&quot;`
+
+    Publisher string `json:&quot;publisher&quot; validate:&quot;required&quot;`
+
+}
+
+type Repository struct {
+
+    DB *gorm.DB
+
+}
+</code></pre><p>Ở đây mình đã tạo một cấu trúc để người dùng truyền lên.<em><strong>validate:required</strong></em> là thẻ sẽ được sử dụng để đảm bảo người dùng không bỏ qua bất kỳ trường nào khi tạo giá trị.</p>
+<p>Sau bước này mình sẽ tạo các hàm thực hiện các chức năng như sau:</p>
+<ul>
+<li>
+<p>Create books</p>
+</li>
+<li>
+<p>Update book by id</p>
+</li>
+<li>
+<p>Delete book by id</p>
+</li>
+<li>
+<p>Get all books</p>
+</li>
+<li>
+<p>Get books by id</p>
+</li>
+</ul>
+<h3 id="create-books">Create Books</h3>
+<pre><code class="language-angular2html" data-lang="angular2html">func (r *Repository) CreateBook(context *fiber.Ctx) error {
+
+    book := Book{}
+
+
+
+    err := context.BodyParser(&amp;book)
+
+    if err != nil {
+
+        context.Status(http.StatusUnprocessableEntity).JSON(
+
+            &amp;fiber.Map{&quot;message&quot;: &quot;request failed&quot;})
+
+        return err
+
+    }
+
+    validator := validator.New()
+
+    err = validator.Struct(Book{})
+
+
+
+    if err != nil {
+
+        context.Status(http.StatusUnprocessableEntity).JSON(
+
+            &amp;fiber.Map{&quot;message&quot;: err},
+
+        )
+
+        return err
+
+    }
+
+
+
+    err = r.DB.Create(&amp;book).Error
+
+
+
+    if err != nil {
+
+        context.Status(http.StatusBadRequest).JSON(
+
+            &amp;fiber.Map{&quot;message&quot;: &quot;could not create book&quot;})
+
+        return err
+
+    }
+
+
+
+    context.Status(http.StatusOK).JSON(&amp;fiber.Map{
+
+        &quot;message&quot;: &quot;book has been successfully added&quot;,
+
+    })
+
+    return nil
+
+}
+</code></pre><h3 id="update-books-by-id">Update Books by ID</h3>
+<pre><code class="language-angular2html" data-lang="angular2html">func (r *Repository) UpdateBook(context *fiber.Ctx) error {
+
+    id := context.Params(&quot;id&quot;)
+
+    if id == &quot;&quot; {
+
+        context.Status(http.StatusInternalServerError).JSON(&amp;fiber.Map{
+
+            &quot;message&quot;: &quot;id cannot be empty&quot;,
+
+        })
+
+        return nil
+
+    }
+
+
+
+    bookModel := &amp;models.Books{}
+
+    book := Book{}
+
+
+
+
+
+err := context.BodyParser(&amp;book)
+
+if err != nil {
+
+    context.Status(http.StatusUnprocessableEntity).JSON(
+
+        &amp;fiber.Map{&quot;message&quot;: &quot;request failed&quot;})
+
+    return err
+
+}
+
+
+
+err = r.DB.Model(bookModel).Where(&quot;id = ?&quot;, id).Updates(book).Error
+
+if err != nil {
+
+    context.Status(http.StatusBadRequest).JSON(&amp;fiber.Map{
+
+        &quot;message&quot;: &quot;could not update book&quot;,
+
+    })
+
+    return err
+
+}
+
+
+
+    context.Status(http.StatusOK).JSON(&amp;fiber.Map{
+
+        &quot;message&quot;: &quot;book has been successfully updated&quot;,
+
+    })
+
+    return nil
+
+
+
+}
+</code></pre><h3 id="delete-book-by-id">Delete Book by ID</h3>
+<pre><code class="language-angular2html" data-lang="angular2html">func (r *Repository) DeleteBook(context *fiber.Ctx) error {
+
+    bookModel := &amp;models.Books{}
+
+
+
+    id := context.Params(&quot;id&quot;)
+
+    if id == &quot;&quot; {
+
+        context.Status(http.StatusInternalServerError).JSON(&amp;fiber.Map{
+
+            &quot;message&quot;: &quot;id cannot be empty&quot;,
+
+        })
+
+        return nil
+
+    }
+
+
+
+    err := r.DB.Delete(bookModel, id)
+
+
+
+    if err.Error != nil {
+
+        context.Status(http.StatusBadRequest).JSON(&amp;fiber.Map{
+
+            &quot;message&quot;: &quot;could not delete book&quot;,
+
+        })
+
+        return err.Error
+
+    }
+
+
+
+    context.Status(http.StatusOK).JSON(&amp;fiber.Map{
+
+        &quot;message&quot;: &quot;book has been successfully deleted&quot;,
+
+    })
+
+    return nil
+</code></pre><h3 id="get-all-books">Get All Books</h3>
+<pre><code class="language-angular2html" data-lang="angular2html">func (r *Repository) GetBooks(context *fiber.Ctx) error {
+
+    bookModels := &amp;[]models.Books{}
+
+
+
+    err := r.DB.Find(bookModels).Error
+
+    if err != nil {
+
+        context.Status(http.StatusBadRequest).JSON(
+
+            &amp;fiber.Map{&quot;message&quot;: &quot;could not get books&quot;})
+
+        return err
+
+    }
+
+
+
+    context.Status(http.StatusOK).JSON(&amp;fiber.Map{
+
+        &quot;message&quot;: &quot;books gotten successfully&quot;,
+
+        &quot;data&quot;:    bookModels,
+
+    })
+
+    return nil
+
+
+
+}
+</code></pre><h3 id="get-books-by-id">Get Books by ID</h3>
+<pre><code class="language-angular2html" data-lang="angular2html">func (r *Repository) GetBookByID(context *fiber.Ctx) error {
+
+id := context.Params(&quot;id&quot;)
+
+bookModel := &amp;models.Books{}
+
+if id == &quot;&quot; {
+
+context.Status(http.StatusInternalServerError).JSON(&amp;fiber.Map{
+
+&quot;message&quot;: &quot;id cannot be empty&quot;,
+
+})
+
+return nil
+
+}
+
+
+
+err := r.DB.Where(&quot;id = ?&quot;, id).First(bookModel).Error
+
+if err != nil {
+
+context.Status(http.StatusBadRequest).JSON(
+
+&amp;fiber.Map{&quot;message&quot;: &quot;could not get book&quot;})
+
+return err
+
+}
+
+
+
+context.Status(http.StatusOK).JSON(&amp;fiber.Map{
+
+&quot;message&quot;: &quot;books id gotten successfully&quot;,
+
+&quot;data&quot;:    bookModel,
+
+})
+
+return nil
+
+}
+</code></pre><h3 id="cài-đặt-routes">Cài đặt Routes</h3>
+<pre><code class="language-angular2html" data-lang="angular2html">func (r *Repository) SetupRoutes(app *fiber.App) {
+
+    api := app.Group(&quot;/api&quot;)
+
+    api.Post(&quot;/create_books&quot;, r.CreateBook)
+
+    api.Delete(&quot;/delete_book/:id&quot;, r.DeleteBook)
+
+    api.Put(&quot;/update_book/:id&quot;, r.UpdateBook)
+
+    api.Get(&quot;/get_books/:id&quot;, r.GetBookByID)
+
+    api.Get(&quot;/books&quot;, r.GetBooks)
+
+}
+</code></pre><h3 id="tạo-main-function">Tạo main function</h3>
+<pre><code class="language-angular2html" data-lang="angular2html">func main() {
+
+    err := godotenv.Load(&quot;.env&quot;)
+
+    if err != nil {
+
+        log.Fatal(err)
+
+    }
+
+
+
+    config := &amp;storage.Config{
+
+        Host:     os.Getenv(&quot;DB_HOST&quot;),
+
+        Port:     os.Getenv(&quot;DB_PORT&quot;),
+
+        Password: os.Getenv(&quot;DB_PASS&quot;),
+
+        User:     os.Getenv(&quot;DB_USER&quot;),
+
+        SSLMode:  os.Getenv(&quot;DB_SSLMODE&quot;),
+
+        DBName:   os.Getenv(&quot;DB_NAME&quot;),
+
+    }
+
+    db, err := storage.NewConnection(config)
+
+    if err != nil {
+
+        log.Fatal(&quot;could not load database&quot;)
+
+    }
+
+
+
+    err = models.MigrateBooks(db)
+
+    if err != nil {
+
+        log.Fatal(&quot;could not migrate db&quot;)
+
+    }
+
+
+
+    r := &amp;service.Repository{
+
+        DB: db,
+
+    }
+
+    app := fiber.New()
+
+    r.SetupRoutes(app)
+
+
+
+    app.Listen(&quot;:8080&quot;)
+
+
+
+}
+</code></pre><p>Các bạn có tham khảo nhiều ví dụ, ứng dụng của Fiber Web Framework</p>
     </article>
     
     
@@ -1997,7 +2502,7 @@ if (!doNotTrack) {
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=Vi%e1%ba%bft%20API%20s%e1%bb%ad%20d%e1%bb%a5ng%20Fiber%20Framework%20%2b%20Postgresql%20trong%20Go%20%28ph%e1%ba%a7n%201%29&url=https%3a%2f%2fhungpt.info%2fen%2fposts%2fapi_golang_with_postgresql_part1%2f&hashtags=Go%2cGolang&via=Hung%20Pham" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=Vi%e1%ba%bft%20API%20s%e1%bb%ad%20d%e1%bb%a5ng%20Fiber%20Framework%20%2b%20Postgresql%20trong%20Go&url=https%3a%2f%2fhungpt.info%2fen%2fposts%2fapi_golang_with_postgresql_part1%2f&hashtags=Go%2cGolang&via=Hung%20Pham" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
@@ -2538,7 +3043,28 @@ document.addEventListener('DOMContentLoaded', function () {
     
   </div>
   <div class="toc " data-dir="ltr" data-folding="true" data-ani="true">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#fiber-là-gì">Fiber là gì?</a></li>
+        <li><a href="#các-tính-năng-của-fiber-framework">Các tính năng của Fiber Framework</a></li>
+        <li><a href="#set-up-the-project">Set up the Project</a></li>
+        <li><a href="#install-the-required-libraries">Install the Required Libraries</a></li>
+        <li><a href="#cài-đặt-database">Cài đặt database</a></li>
+        <li><a href="#tạo-model">Tạo model</a></li>
+        <li><a href="#tạo-service">Tạo service</a></li>
+        <li><a href="#create-books">Create Books</a></li>
+        <li><a href="#update-books-by-id">Update Books by ID</a></li>
+        <li><a href="#delete-book-by-id">Delete Book by ID</a></li>
+        <li><a href="#get-all-books">Get All Books</a></li>
+        <li><a href="#get-books-by-id">Get Books by ID</a></li>
+        <li><a href="#cài-đặt-routes">Cài đặt Routes</a></li>
+        <li><a href="#tạo-main-function">Tạo main function</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
   </div>
 </section>
 
