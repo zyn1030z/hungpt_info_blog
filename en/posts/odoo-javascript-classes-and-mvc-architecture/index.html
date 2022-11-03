@@ -1336,9 +1336,9 @@
 
 <meta name="keywords" content="Odoo,Javascript">
 
-<meta name="created" content="2022-11-04T21:34:42&#43;0700">
-<meta name="modified" content="2022-11-04T21:34:42&#43;0700">
-<meta property="article:published_time" content="2022-11-04T21:34:42&#43;0700">
+<meta name="created" content="2022-11-04T02:34:42&#43;0700">
+<meta name="modified" content="2022-11-04T02:34:42&#43;0700">
+<meta property="article:published_time" content="2022-11-04T02:34:42&#43;0700">
 
 <meta name="author" content="Hung Pham">
 <meta property="article:author" content="https://hungpt.info/en/posts/odoo-javascript-classes-and-mvc-architecture/@Hung Pham">
@@ -1395,10 +1395,10 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "headline": "Odoo JavaScript - Phần 1: Tổng quan về class và kiến trúc MVC",
-    "datePublished": "2022-11-04T21:34:42+07:00",
-    "dateModified": "2022-11-04T21:34:42+07:00",
+    "datePublished": "2022-11-04T02:34:42+07:00",
+    "dateModified": "2022-11-04T02:34:42+07:00",
     "url" : "https://hungpt.info/en/posts/odoo-javascript-classes-and-mvc-architecture/",
-    "description": "Trong bài viết này, chúng ta sẽ đi qua những kiến thức cơ bản về Odoo JavaScript Framework với mục tiêu cuối cùng là tạo một module trong OWL.",
+    "description": "\u003cp\u003eTrong bài viết này, chúng ta sẽ đi qua những kiến thức cơ bản về Odoo JavaScript Framework với mục tiêu cuối cùng là tạo\u003cbr /\u003e một module trong OWL.\u003c/p\u003e",
     "keywords": ["Odoo","Javascript"],
     "image" : "https://hungpt.info/images/feature1/img_20.png",
     "author": {
@@ -1768,7 +1768,7 @@ if (!doNotTrack) {
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Nov 4, 2022 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;1&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;2&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;Hung Pham</span>
   
@@ -1792,8 +1792,131 @@ if (!doNotTrack) {
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <p>Trong bài viết này, chúng ta sẽ đi qua những kiến thức cơ bản về Odoo JavaScript Framework với mục tiêu cuối cùng là tạo một module trong OWL.</p>
+      <p>Trong bài viết này, chúng ta sẽ đi qua những kiến thức cơ bản về Odoo JavaScript Framework với mục tiêu cuối cùng là tạo<br />
+một module trong OWL.</p>
+<p>Kể từ Odoo 14 (và cả Odoo 15, 16), hệ thống JavaScript MVC cốt lõi trong Odoo vẫn chưa được viết lại bằng OWL. Vì vậy chúng ta sẽ tìm hiểu kiến trúc MVC của Odoo nhưng trước tiên, chúng ta phải xem xét 2 thành phần chính của các class trong JavaScript mà mọi phần đều được xây dựng dựa trên  <em><strong>&lsquo;web.Class&rsquo;</strong></em> và <em><strong>&lsquo;web.Widget&rsquo;</strong></em>.</p>
+<h3 id="webclass-trong-odoo">web.Class trong Odoo</h3>
+<p>Lớp web.js được định nghĩa trong odoo <em><strong>/addons/web/static/src/js/core/class.js</strong></em> là một đoạn code khá cũ<br />
+Việc kế thừa các lớp trong javascript trong Odoo được viết như sau:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"> <span class="o">*</span> <span class="err">@</span><span class="kr">class</span> <span class="nx">Class</span>
+ <span class="o">*</span><span class="err">/</span>
+<span class="kd">function</span> <span class="nx">OdooClass</span><span class="p">(){}</span>
 
+<span class="kd">var</span> <span class="nx">initializing</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">fnTest</span> <span class="o">=</span> <span class="sr">/xyz/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span><span class="nx">xyz</span><span class="p">();})</span> <span class="o">?</span> <span class="sr">/\b_super\b/</span> <span class="o">:</span> <span class="sr">/.*/</span><span class="p">;</span>
+
+<span class="cm">/**
+</span><span class="cm"> * Subclass an existing class
+</span><span class="cm"> *
+</span><span class="cm"> * @param {Object} prop class-level properties (class attributes and instance methods) to set on the new class
+</span><span class="cm"> */</span>
+<span class="nx">OdooClass</span><span class="p">.</span><span class="nx">extend</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">_super</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span>
+    <span class="c1">// Support mixins arguments
+</span><span class="c1"></span>    <span class="kd">var</span> <span class="nx">args</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">toArray</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);</span>
+    <span class="nx">args</span><span class="p">.</span><span class="nx">unshift</span><span class="p">({});</span>
+    <span class="kd">var</span> <span class="nx">prop</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">extend</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">_</span><span class="p">,</span><span class="nx">args</span><span class="p">);</span>
+
+    <span class="c1">// Instantiate a web class (but only create the instance,
+</span><span class="c1"></span>    <span class="c1">// don&#39;t run the init constructor)
+</span><span class="c1"></span>    <span class="nx">initializing</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">This</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">prototype</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">This</span><span class="p">();</span>
+    <span class="nx">initializing</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Điều này giúp Odoo có thể làm những việc như:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">Class</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;web.Class&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">mixins</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;web.mixins&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">ServicesMixin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;web.ServicesMixin&#39;</span><span class="p">);</span>
+
+
+<span class="kd">var</span> <span class="nx">MyCustomClass</span> <span class="o">=</span> <span class="nx">core</span><span class="p">.</span><span class="nx">Class</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">mixins</span><span class="p">.</span><span class="nx">PropertiesMixin</span><span class="p">,</span> <span class="nx">ServicesMixin</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">myProperty</span><span class="o">:</span> <span class="s1">&#39;test&#39;</span>
+    <span class="c1">// ...
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Kết luận lại thì <em><strong>Web.Class</strong></em> là thứ cho phép bạn thực hiện <em><strong>.extend()</strong></em> và <em><strong>.include</strong></em> trên mọi Widget JavaScript của Odoo, v.v.</p>
+<h3 id="webwidget-odoo-class">web.Widget Odoo Class.</h3>
+<p>Widget Class là lớp mở rộng của <em><strong>web.class</strong></em> kết hợp cùng với DOM thông qua Jquery và được định nghĩa trong <em><strong>/addons/web/static/src/js/core/widget.js</strong></em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">Widget</span> <span class="o">=</span> <span class="nx">core</span><span class="p">.</span><span class="nx">Class</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">mixins</span><span class="p">.</span><span class="nx">PropertiesMixin</span><span class="p">,</span> <span class="nx">ServicesMixin</span><span class="p">,</span> <span class="p">{</span>
+    <span class="c1">// Backbone-ish API
+</span><span class="c1"></span>    <span class="nx">tagName</span><span class="o">:</span> <span class="s1">&#39;div&#39;</span><span class="p">,</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nx">className</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nx">attributes</span><span class="o">:</span> <span class="p">{},</span>
+    <span class="nx">events</span><span class="o">:</span> <span class="p">{},</span>
+    <span class="cm">/**
+</span><span class="cm">     * The name of the QWeb template that will be used for rendering. Must be
+</span><span class="cm">     * redefined in subclasses or the default render() method can not be used.
+</span><span class="cm">     *
+</span><span class="cm">     * @type {null|string}
+</span><span class="cm">     */</span>
+    <span class="nx">template</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Bằng cách mở rộng <em><strong>web.class</strong></em>, Class Widget này có thể có 2 mixin, PropertiesMixin và ServicesMixin.</p>
     </article>
     
     
@@ -2212,6 +2335,13 @@ if (!doNotTrack) {
     
     <div class="grow"></div>
     
+      <a href="https://hungpt.info/en/posts/what-is-mixin-class-how-to-use-mixin-classes-in-odoo-15/" class="pagination-single__right">      
+        <div class="pagination-single__right-title">Class Mixin là gì và Cách sử dụng class Mixin trong Odoo 15</div>
+        <div class="pagination-single__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
+        </div>
+      </a>
+    
   
 </nav>
     
@@ -2570,7 +2700,16 @@ document.addEventListener('DOMContentLoaded', function () {
     
   </div>
   <div class="toc " data-dir="ltr" data-folding="true" data-ani="true">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#webclass-trong-odoo">web.Class trong Odoo</a></li>
+        <li><a href="#webwidget-odoo-class">web.Widget Odoo Class.</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
   </div>
 </section>
 
