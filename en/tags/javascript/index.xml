@@ -14,11 +14,39 @@
     <managingEditor>thaihung412@gmail.com (Hùng Phạm)</managingEditor>
     <webMaster>thaihung412@gmail.com (Hùng Phạm)</webMaster>
     <copyright>©2022, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 17 Oct 2022 21:34:42 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 04 Nov 2022 21:34:42 +0700</lastBuildDate>
     
         <atom:link href="https://hungpt.info/en/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Odoo JavaScript - Phần 1: Tổng quan về class và kiến trúc MVC</title>
+        <link>https://hungpt.info/en/posts/odoo-javascript-classes-and-mvc-architecture/</link>
+        <pubDate>Fri, 04 Nov 2022 21:34:42 +0700</pubDate>
+        <author>thaihung412@gmail.com (Hùng Phạm)</author>
+        <atom:modified>Fri, 04 Nov 2022 21:34:42 +0700</atom:modified>
+        <guid>https://hungpt.info/en/posts/odoo-javascript-classes-and-mvc-architecture/</guid>
+        <description>Trong bài viết này, chúng ta sẽ đi qua những kiến thức cơ bản về Odoo JavaScript Framework với mục tiêu cuối cùng là tạo một module trong OWL.</description>
+        
+        <dc:creator>Hung Pham</dc:creator>
+        <media:content url="https://hungpt.info/images/feature1/img_20.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Odoo</category>
+            
+          
+            
+              <category>Javascript</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Sử dụng thư viện Select2 trong Odoo</title>

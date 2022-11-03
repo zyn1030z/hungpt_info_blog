@@ -14,7 +14,7 @@
   
   <url>
     <loc>https://hungpt.info/en/</loc>
-    <lastmod>2022-10-20T21:34:42+07:00</lastmod>
+    <lastmod>2022-11-04T21:34:42+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -28,18 +28,23 @@
   </url>
   
   <url>
-    <loc>https://hungpt.info/en/tags/go/</loc>
-    <lastmod>2022-10-20T21:34:42+07:00</lastmod>
+    <loc>https://hungpt.info/en/tags/javascript/</loc>
+    <lastmod>2022-11-04T21:34:42+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hungpt.info/en/tags/golang/</loc>
-    <lastmod>2022-10-20T21:34:42+07:00</lastmod>
+    <loc>https://hungpt.info/en/tags/odoo/</loc>
+    <lastmod>2022-11-04T21:34:42+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hungpt.info/en/posts/odoo-javascript-classes-and-mvc-architecture/</loc>
+    <lastmod>2022-11-04T21:34:42+07:00</lastmod>
   </url>
   
   <url>
     <loc>https://hungpt.info/en/posts/</loc>
-    <lastmod>2022-10-20T21:34:42+07:00</lastmod>
+    <lastmod>2022-11-04T21:34:42+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -54,7 +59,7 @@
   
   <url>
     <loc>https://hungpt.info/en/tags/</loc>
-    <lastmod>2022-10-20T21:34:42+07:00</lastmod>
+    <lastmod>2022-11-04T21:34:42+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -65,6 +70,16 @@
                 hreflang="en"
                 href="https://hungpt.info/en/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://hungpt.info/en/tags/go/</loc>
+    <lastmod>2022-10-20T21:34:42+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hungpt.info/en/tags/golang/</loc>
+    <lastmod>2022-10-20T21:34:42+07:00</lastmod>
   </url>
   
   <url>
@@ -85,16 +100,6 @@
   <url>
     <loc>https://hungpt.info/en/tags/devops/</loc>
     <lastmod>2022-10-18T21:34:42+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hungpt.info/en/tags/javascript/</loc>
-    <lastmod>2022-10-17T21:34:42+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hungpt.info/en/tags/odoo/</loc>
-    <lastmod>2022-10-17T21:34:42+07:00</lastmod>
   </url>
   
   <url>
