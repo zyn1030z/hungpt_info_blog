@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Odoo JavaScript - Phần 1: Tổng quan về class và kiến trúc MVC – HungPT&#39;s Blog</title>
+    <title>Odoo JavaScript - Phần 1: Tổng quan về javascript và kiến trúc MVC trong Odoo (Phần 1) – HungPT&#39;s Blog</title>
     
 
 
@@ -1345,7 +1345,7 @@
 
 
 <meta property="og:site_name" content="HungPT&#39;s Blog">
-<meta property="og:title" content="Odoo JavaScript - Phần 1: Tổng quan về class và kiến trúc MVC">
+<meta property="og:title" content="Odoo JavaScript - Phần 1: Tổng quan về javascript và kiến trúc MVC trong Odoo (Phần 1)">
 <meta property="og:url" content="https://hungpt.info/en/posts/odoo-javascript-classes-and-mvc-architecture/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="Từ coder đến developer">
@@ -1355,7 +1355,7 @@
     <meta property="og:image:url" content="https://hungpt.info/images/feature1/img_20.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:app:name:iphone" content="HungPT&#39;s Blog">
-    <meta property="twitter:title" content="Odoo JavaScript - Phần 1: Tổng quan về class và kiến trúc MVC">
+    <meta property="twitter:title" content="Odoo JavaScript - Phần 1: Tổng quan về javascript và kiến trúc MVC trong Odoo (Phần 1)">
     <meta property="twitter:description" content="Từ coder đến developer">
   
 
@@ -1394,7 +1394,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "Odoo JavaScript - Phần 1: Tổng quan về class và kiến trúc MVC",
+    "headline": "Odoo JavaScript - Phần 1: Tổng quan về javascript và kiến trúc MVC trong Odoo (Phần 1)",
     "datePublished": "2022-11-04T02:34:42+07:00",
     "dateModified": "2022-11-04T02:34:42+07:00",
     "url" : "https://hungpt.info/en/posts/odoo-javascript-classes-and-mvc-architecture/",
@@ -1749,7 +1749,7 @@ if (!doNotTrack) {
   
   <li  class="is-active" >
     
-      <span>Odoo JavaScript - Phần 1: Tổng quan về class và kiến trúc MVC</span>
+      <span>Odoo JavaScript - Phần 1: Tổng quan về javascript và kiến trúc MVC trong Odoo (Phần 1)</span>
     
   </li>
   
@@ -1761,14 +1761,14 @@ if (!doNotTrack) {
   <div class="single ">
     <div class="single__nojs">This page looks best with JavaScript enabled</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">Odoo JavaScript - Phần 1: Tổng quan về class và kiến trúc MVC</h2>
+    <h2 class="single__title" data-ani="true">Odoo JavaScript - Phần 1: Tổng quan về javascript và kiến trúc MVC trong Odoo (Phần 1)</h2>
     <h3 class="single__subtitle"></h3>
     <div class="single__meta">
       
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Nov 4, 2022 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;2&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;9&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="Viết bởi">✍️&nbsp;Hung Pham</span>
   
@@ -1918,6 +1918,546 @@ Việc kế thừa các lớp trong javascript trong Odoo được viết như s
 </div>
 </div><p>Bằng cách mở rộng <em><strong>web.class</strong></em>, Class Widget này có thể có 2 mixin, PropertiesMixin và ServicesMixin.</p>
 <h4 id="webwidget-extends-the-propertiesmixin">web.Widget extends the PropertiesMixin</h4>
+<p><em><strong>PropertiesMixin</strong></em> được cho là xử lý các thuộc tính(properties) tuy nhiên khi chúng ta xem code của mixin này:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript">
+<span class="cm">/**
+</span><span class="cm"> * @name PropertiesMixin
+</span><span class="cm"> * @mixin
+</span><span class="cm"> */</span>
+<span class="kd">var</span> <span class="nx">PropertiesMixin</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">extend</span><span class="p">({},</span> <span class="nx">EventDispatcherMixin</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">init</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">EventDispatcherMixin</span><span class="p">.</span><span class="nx">init</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">__getterSetterInternalMap</span> <span class="o">=</span> <span class="p">{};</span>
+    <span class="p">},</span>
+    <span class="nx">set</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">arg1</span><span class="p">,</span> <span class="nx">arg2</span><span class="p">,</span> <span class="nx">arg3</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">map</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">options</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">arg1</span> <span class="o">===</span> <span class="s2">&#34;string&#34;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">map</span> <span class="o">=</span> <span class="p">{};</span>
+            <span class="nx">map</span><span class="p">[</span><span class="nx">arg1</span><span class="p">]</span> <span class="o">=</span> <span class="nx">arg2</span><span class="p">;</span>
+            <span class="nx">options</span> <span class="o">=</span> <span class="nx">arg3</span> <span class="o">||</span> <span class="p">{};</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">map</span> <span class="o">=</span> <span class="nx">arg1</span><span class="p">;</span>
+            <span class="nx">options</span> <span class="o">=</span> <span class="nx">arg2</span> <span class="o">||</span> <span class="p">{};</span>
+        <span class="p">}</span>
+        <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+        <span class="kd">var</span> <span class="nx">changed</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="nx">_</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">map</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">tmp</span> <span class="o">=</span> <span class="nx">self</span><span class="p">.</span><span class="nx">__getterSetterInternalMap</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">tmp</span> <span class="o">===</span> <span class="nx">val</span><span class="p">)</span>
+                <span class="k">return</span><span class="p">;</span>
+            <span class="c1">// seriously, why are you doing this? it is obviously a stupid design.
+</span><span class="c1"></span>            <span class="c1">// the properties mixin should not be concerned with handling fields details.
+</span><span class="c1"></span>            <span class="c1">// this also has the side effect of introducing a dependency on utils.  Todo:
+</span><span class="c1"></span>            <span class="c1">// remove this, or move it elsewhere.  Also, learn OO programming.
+</span><span class="c1"></span>            <span class="k">if</span> <span class="p">(</span><span class="nx">key</span> <span class="o">===</span> <span class="s1">&#39;value&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">self</span><span class="p">.</span><span class="nx">field</span> <span class="o">&amp;&amp;</span> <span class="nx">self</span><span class="p">.</span><span class="nx">field</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;float&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">tmp</span> <span class="o">&amp;&amp;</span> <span class="nx">val</span><span class="p">){</span>
+                <span class="kd">var</span> <span class="nx">digits</span> <span class="o">=</span> <span class="nx">self</span><span class="p">.</span><span class="nx">field</span><span class="p">.</span><span class="nx">digits</span><span class="p">;</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">_</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">digits</span><span class="p">))</span> <span class="p">{</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="nx">utils</span><span class="p">.</span><span class="nx">float_is_zero</span><span class="p">(</span><span class="nx">tmp</span> <span class="o">-</span> <span class="nx">val</span><span class="p">,</span> <span class="nx">digits</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="p">{</span>
+                        <span class="k">return</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="nx">changed</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="nx">self</span><span class="p">.</span><span class="nx">__getterSetterInternalMap</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">val</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="o">!</span> <span class="nx">options</span><span class="p">.</span><span class="nx">silent</span><span class="p">)</span>
+                <span class="nx">self</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&#34;change:&#34;</span> <span class="o">+</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">self</span><span class="p">,</span> <span class="p">{</span>
+                    <span class="nx">oldValue</span><span class="o">:</span> <span class="nx">tmp</span><span class="p">,</span>
+                    <span class="nx">newValue</span><span class="o">:</span> <span class="nx">val</span>
+                <span class="p">});</span>
+        <span class="p">});</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">changed</span><span class="p">)</span>
+            <span class="nx">self</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&#34;change&#34;</span><span class="p">,</span> <span class="nx">self</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="nx">get</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">__getterSetterInternalMap</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="k">return</span> <span class="p">{</span>
+    <span class="nx">ParentedMixin</span><span class="o">:</span> <span class="nx">ParentedMixin</span><span class="p">,</span>
+    <span class="nx">EventDispatcherMixin</span><span class="o">:</span> <span class="nx">EventDispatcherMixin</span><span class="p">,</span>
+    <span class="nx">PropertiesMixin</span><span class="o">:</span> <span class="nx">PropertiesMixin</span><span class="p">,</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><em><strong>PropertiesMixin</strong></em> lại extends <em><strong>EventDispatcherMixin</strong></em>, mục đích chính của PropertiesMixin đó chính là xử lý các trigger event trên UI<br />
+Có một đoạn code khá hài hước mà hiện tại nó vẫn còn trong core của odoo</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">_</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">map</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">tmp</span> <span class="o">=</span> <span class="nx">self</span><span class="p">.</span><span class="nx">__getterSetterInternalMap</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">tmp</span> <span class="o">===</span> <span class="nx">val</span><span class="p">)</span>
+                <span class="k">return</span><span class="p">;</span>
+            <span class="c1">// seriously, why are you doing this? it is obviously a stupid design.
+</span><span class="c1"></span>            <span class="c1">// the properties mixin should not be concerned with handling fields details.
+</span><span class="c1"></span>            <span class="c1">// this also has the side effect of introducing a dependency on utils.  Todo:
+</span><span class="c1"></span>            <span class="c1">// remove this, or move it elsewhere.  Also, learn OO programming.
+</span><span class="c1"></span>            <span class="k">if</span> <span class="p">(</span><span class="nx">key</span> <span class="o">===</span> <span class="s1">&#39;value&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">self</span><span class="p">.</span><span class="nx">field</span> <span class="o">&amp;&amp;</span> <span class="nx">self</span><span class="p">.</span><span class="nx">field</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s1">&#39;float&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">tmp</span> <span class="o">&amp;&amp;</span> <span class="nx">val</span><span class="p">){</span>
+                <span class="kd">var</span> <span class="nx">digits</span> <span class="o">=</span> <span class="nx">self</span><span class="p">.</span><span class="nx">field</span><span class="p">.</span><span class="nx">digits</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><em><strong>Also, learn OO programming.</strong></em> =)))<br />
+Bản thân <em><strong>EventDispatcherMixin</strong></em> cũng extend từ <em><strong>ParentedMixin</strong></em> do đó, nó cũng có thể gọi được các function như <em><strong>getParent</strong></em> hoặc <em><strong>getChildren</strong></em></p>
+<h3 id="webwidget-extends-the-servicesmixin">web.Widget extends the ServicesMixin</h3>
+<p>Mixin này cung cấp cho Widget khả năng <em><strong>loadViews</strong></em>, <em><strong>do_action</strong></em>, <em><strong>get_session</strong></em> và thực hiện hàm RPC thông qua hàm _rpc.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">odoo</span><span class="p">.</span><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;web.ServicesMixin&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">require</span><span class="p">)</span> <span class="p">{</span>
+<span class="s2">&#34;use strict&#34;</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">rpc</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;web.rpc&#39;</span><span class="p">);</span>
+
+<span class="cm">/**
+</span><span class="cm"> * @mixin
+</span><span class="cm"> * @name ServicesMixin
+</span><span class="cm"> */</span>
+<span class="kd">var</span> <span class="nx">ServicesMixin</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="cm">/**
+</span><span class="cm">     * @param  {string} service
+</span><span class="cm">     * @param  {string} method
+</span><span class="cm">     * @return {any} result of the service called
+</span><span class="cm">     */</span>
+    <span class="nx">call</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">service</span><span class="p">,</span> <span class="nx">method</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">args</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">result</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">trigger_up</span><span class="p">(</span><span class="s1">&#39;call_service&#39;</span><span class="p">,</span> <span class="p">{</span>
+            <span class="nx">service</span><span class="o">:</span> <span class="nx">service</span><span class="p">,</span>
+            <span class="nx">method</span><span class="o">:</span> <span class="nx">method</span><span class="p">,</span>
+            <span class="nx">args</span><span class="o">:</span> <span class="nx">args</span><span class="p">,</span>
+            <span class="nx">callback</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">result</span> <span class="o">=</span> <span class="nx">r</span><span class="p">;</span>
+            <span class="p">},</span>
+        <span class="p">});</span>
+        <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+    <span class="p">},</span>
+    <span class="cm">/**
+</span><span class="cm">     * @private
+</span><span class="cm">     * @param {Object} libs - @see ajax.loadLibs
+</span><span class="cm">     * @param {Object} [context] - @see ajax.loadLibs
+</span><span class="cm">     * @param {Object} [tplRoute=this._loadLibsTplRoute] - @see ajax.loadLibs
+</span><span class="cm">     * @returns {Promise}
+</span><span class="cm">     */</span>
+    <span class="nx">_loadLibs</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">libs</span><span class="p">,</span> <span class="nx">context</span><span class="p">,</span> <span class="nx">tplRoute</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="s1">&#39;ajax&#39;</span><span class="p">,</span> <span class="s1">&#39;loadLibs&#39;</span><span class="p">,</span> <span class="nx">libs</span><span class="p">,</span> <span class="nx">context</span><span class="p">,</span> <span class="nx">tplRoute</span> <span class="o">||</span> <span class="k">this</span><span class="p">.</span><span class="nx">_loadLibsTplRoute</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="cm">/**
+</span><span class="cm">     * Builds and executes RPC query. Returns a promise resolved with
+</span><span class="cm">     * the RPC result.
+</span><span class="cm">     *
+</span><span class="cm">     * @param {string} params either a route or a model
+</span><span class="cm">     * @param {string} options if a model is given, this argument is a method
+</span><span class="cm">     * @returns {Promise}
+</span><span class="cm">     */</span>
+    <span class="nx">_rpc</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">params</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">query</span> <span class="o">=</span> <span class="nx">rpc</span><span class="p">.</span><span class="nx">buildQuery</span><span class="p">(</span><span class="nx">params</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">prom</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="s1">&#39;ajax&#39;</span><span class="p">,</span> <span class="s1">&#39;rpc&#39;</span><span class="p">,</span> <span class="nx">query</span><span class="p">.</span><span class="nx">route</span><span class="p">,</span> <span class="nx">query</span><span class="p">.</span><span class="nx">params</span><span class="p">,</span> <span class="nx">options</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">prom</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">prom</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{});</span>
+            <span class="nx">prom</span><span class="p">.</span><span class="nx">abort</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{};</span>
+        <span class="p">}</span>
+        <span class="kd">var</span> <span class="nx">abort</span> <span class="o">=</span> <span class="nx">prom</span><span class="p">.</span><span class="nx">abort</span> <span class="o">?</span> <span class="nx">prom</span><span class="p">.</span><span class="nx">abort</span> <span class="o">:</span> <span class="nx">prom</span><span class="p">.</span><span class="nx">reject</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">abort</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&#34;a rpc promise should always have a reject function&#34;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="nx">prom</span><span class="p">.</span><span class="nx">abort</span> <span class="o">=</span> <span class="nx">abort</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="nx">prom</span><span class="p">);</span>
+        <span class="k">return</span> <span class="nx">prom</span><span class="p">;</span>
+    <span class="p">},</span>
+    <span class="nx">loadFieldView</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">modelName</span><span class="p">,</span> <span class="nx">context</span><span class="p">,</span> <span class="nx">view_id</span><span class="p">,</span> <span class="nx">view_type</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">loadViews</span><span class="p">(</span><span class="nx">modelName</span><span class="p">,</span> <span class="nx">context</span><span class="p">,</span> <span class="p">[[</span><span class="nx">view_id</span><span class="p">,</span> <span class="nx">view_type</span><span class="p">]],</span> <span class="nx">options</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">result</span><span class="p">[</span><span class="nx">view_type</span><span class="p">];</span>
+        <span class="p">});</span>
+    <span class="p">},</span>
+    <span class="nx">loadViews</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">modelName</span><span class="p">,</span> <span class="nx">context</span><span class="p">,</span> <span class="nx">views</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">resolve</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">self</span><span class="p">.</span><span class="nx">trigger_up</span><span class="p">(</span><span class="s1">&#39;load_views&#39;</span><span class="p">,</span> <span class="p">{</span>
+                <span class="nx">modelName</span><span class="o">:</span> <span class="nx">modelName</span><span class="p">,</span>
+                <span class="nx">context</span><span class="o">:</span> <span class="nx">context</span><span class="p">,</span>
+                <span class="nx">views</span><span class="o">:</span> <span class="nx">views</span><span class="p">,</span>
+                <span class="nx">options</span><span class="o">:</span> <span class="nx">options</span><span class="p">,</span>
+                <span class="nx">on_success</span><span class="o">:</span> <span class="nx">resolve</span><span class="p">,</span>
+            <span class="p">});</span>
+        <span class="p">});</span>
+    <span class="p">},</span>
+    <span class="nx">loadFilters</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">modelName</span><span class="p">,</span> <span class="nx">actionId</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">self</span><span class="p">.</span><span class="nx">trigger_up</span><span class="p">(</span><span class="s1">&#39;load_filters&#39;</span><span class="p">,</span> <span class="p">{</span>
+                <span class="nx">modelName</span><span class="o">:</span> <span class="nx">modelName</span><span class="p">,</span>
+                <span class="nx">actionId</span><span class="o">:</span> <span class="nx">actionId</span><span class="p">,</span>
+                <span class="nx">context</span><span class="o">:</span> <span class="nx">context</span><span class="p">,</span>
+                <span class="nx">on_success</span><span class="o">:</span> <span class="nx">resolve</span><span class="p">,</span>
+            <span class="p">});</span>
+        <span class="p">});</span>
+    <span class="p">},</span>
+    <span class="nx">createFilter</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">filter</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">self</span><span class="p">.</span><span class="nx">trigger_up</span><span class="p">(</span><span class="s1">&#39;create_filter&#39;</span><span class="p">,</span> <span class="p">{</span>
+                <span class="nx">filter</span><span class="o">:</span> <span class="nx">filter</span><span class="p">,</span>
+                <span class="nx">on_success</span><span class="o">:</span> <span class="nx">resolve</span><span class="p">,</span>
+            <span class="p">});</span>
+        <span class="p">});</span>
+    <span class="p">},</span>
+    <span class="nx">deleteFilter</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">filterId</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">self</span><span class="p">.</span><span class="nx">trigger_up</span><span class="p">(</span><span class="s1">&#39;delete_filter&#39;</span><span class="p">,</span> <span class="p">{</span>
+                <span class="nx">filterId</span><span class="o">:</span> <span class="nx">filterId</span><span class="p">,</span>
+                <span class="nx">on_success</span><span class="o">:</span> <span class="nx">resolve</span><span class="p">,</span>
+            <span class="p">});</span>
+        <span class="p">});</span>
+    <span class="p">},</span>
+    <span class="c1">// Session stuff
+</span><span class="c1"></span>    <span class="nx">getSession</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">session</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">trigger_up</span><span class="p">(</span><span class="s1">&#39;get_session&#39;</span><span class="p">,</span> <span class="p">{</span>
+            <span class="nx">callback</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">session</span> <span class="o">=</span> <span class="nx">result</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+        <span class="k">return</span> <span class="nx">session</span><span class="p">;</span>
+    <span class="p">},</span>
+    <span class="cm">/**
+</span><span class="cm">     * Informs the action manager to do an action. This supposes that the action
+</span><span class="cm">     * manager can be found amongst the ancestors of the current widget.
+</span><span class="cm">     * If that&#39;s not the case this method will simply return an unresolved
+</span><span class="cm">     * promise.
+</span><span class="cm">     *
+</span><span class="cm">     * @param {any} action
+</span><span class="cm">     * @param {any} options
+</span><span class="cm">     * @returns {Promise}
+</span><span class="cm">     */</span>
+    <span class="nx">do_action</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">action</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">self</span><span class="p">.</span><span class="nx">trigger_up</span><span class="p">(</span><span class="s1">&#39;do_action&#39;</span><span class="p">,</span> <span class="p">{</span>
+                <span class="nx">action</span><span class="o">:</span> <span class="nx">action</span><span class="p">,</span>
+                <span class="nx">options</span><span class="o">:</span> <span class="nx">options</span><span class="p">,</span>
+                <span class="nx">on_success</span><span class="o">:</span> <span class="nx">resolve</span><span class="p">,</span>
+                <span class="nx">on_fail</span><span class="o">:</span> <span class="nx">reject</span><span class="p">,</span>
+            <span class="p">});</span>
+        <span class="p">});</span>
+    <span class="p">},</span>
+    <span class="cm">/**
+</span><span class="cm">     * Displays a notification.
+</span><span class="cm">     *
+</span><span class="cm">     * @param {Object} options
+</span><span class="cm">     * @param {string} options.title
+</span><span class="cm">     * @param {string} [options.subtitle]
+</span><span class="cm">     * @param {string} [options.message]
+</span><span class="cm">     * @param {string} [options.type=&#39;warning&#39;] &#39;info&#39;, &#39;success&#39;, &#39;warning&#39;, &#39;danger&#39; or &#39;&#39;
+</span><span class="cm">     * @param {boolean} [options.sticky=false]
+</span><span class="cm">     * @param {string} [options.className]
+</span><span class="cm">     */</span>
+    <span class="nx">displayNotification</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="s1">&#39;notification&#39;</span><span class="p">,</span> <span class="s1">&#39;notify&#39;</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="cm">/**
+</span><span class="cm">     * @deprecated will be removed as soon as the notification system is reviewed
+</span><span class="cm">     * @see displayNotification
+</span><span class="cm">     */</span>
+    <span class="nx">do_notify</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">title</span><span class="p">,</span> <span class="nx">message</span><span class="p">,</span> <span class="nx">sticky</span><span class="p">,</span> <span class="nx">className</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">displayNotification</span><span class="p">({</span>
+            <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;warning&#39;</span><span class="p">,</span>
+            <span class="nx">title</span><span class="o">:</span> <span class="nx">title</span><span class="p">,</span>
+            <span class="nx">message</span><span class="o">:</span> <span class="nx">message</span><span class="p">,</span>
+            <span class="nx">sticky</span><span class="o">:</span> <span class="nx">sticky</span><span class="p">,</span>
+            <span class="nx">className</span><span class="o">:</span> <span class="nx">className</span><span class="p">,</span>
+        <span class="p">});</span>
+    <span class="p">},</span>
+    <span class="cm">/**
+</span><span class="cm">     * @deprecated will be removed as soon as the notification system is reviewed
+</span><span class="cm">     * @see displayNotification
+</span><span class="cm">     */</span>
+    <span class="nx">do_warn</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">title</span><span class="p">,</span> <span class="nx">message</span><span class="p">,</span> <span class="nx">sticky</span><span class="p">,</span> <span class="nx">className</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="nx">title</span><span class="p">,</span> <span class="nx">message</span><span class="p">);</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">displayNotification</span><span class="p">({</span>
+            <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;danger&#39;</span><span class="p">,</span>
+            <span class="nx">title</span><span class="o">:</span> <span class="nx">title</span><span class="p">,</span>
+            <span class="nx">message</span><span class="o">:</span> <span class="nx">message</span><span class="p">,</span>
+            <span class="nx">sticky</span><span class="o">:</span> <span class="nx">sticky</span><span class="p">,</span>
+            <span class="nx">className</span><span class="o">:</span> <span class="nx">className</span><span class="p">,</span><span class="k">return</span>
+        <span class="p">});</span>
+    <span class="p">},</span>
+<span class="p">};</span>
+
+<span class="k">return</span> <span class="nx">ServicesMixin</span><span class="p">;</span>
+
+<span class="p">});</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Ở function <em><strong>do_action</strong></em> chúng ta có thể thấy rằng bản chất vẫn là gọi đến hàm <em><strong>trigger_up</strong></em>, tuy nhiên mixin này lại không extend <em><strong>EventDispatcherMixin</strong></em> do đó để có thể dụng hết các function của mixin này bạn phải extend cả <em><strong>EventsDispatcherMixin</strong></em> vào class của bạn, khá là phiền phức nhỉ?😁</p>
+<h4 id="ok-hãy-tóm-tắt-lại-mớ-hỗn-độn-này-vậy-webwidget-có-thể-làm-gì">OK, Hãy tóm tắt lại mớ hỗn độn này, vậy web.Widget có thể làm gì?😄</h4>
+<p>web.Widget có thể truy cập vào:</p>
+<ul>
+<li>ParentedMixin với các phương thức như <strong><strong>getChildren</strong></strong>, <strong><strong>getParent</strong></strong>&hellip;</li>
+<li>EventDispatcherMixin để kiểm soát các event thông qua trigger_up</li>
+<li>PropertiesMixin với <em><strong>get</strong></em> và <em><strong>set</strong></em></li>
+<li>ServicesMixin với các phương thức như <em><strong>rpc</strong></em>, <em><strong>load_view</strong></em>&hellip;</li>
+</ul>
     </article>
     
     
@@ -2122,7 +2662,7 @@ Việc kế thừa các lớp trong javascript trong Odoo được viết như s
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=Odoo%20JavaScript%20-%20Ph%e1%ba%a7n%201%3a%20T%e1%bb%95ng%20quan%20v%e1%bb%81%20class%20v%c3%a0%20ki%e1%ba%bfn%20tr%c3%bac%20MVC&url=https%3a%2f%2fhungpt.info%2fen%2fposts%2fodoo-javascript-classes-and-mvc-architecture%2f&hashtags=Odoo%2cJavascript&via=Hung%20Pham" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=Odoo%20JavaScript%20-%20Ph%e1%ba%a7n%201%3a%20T%e1%bb%95ng%20quan%20v%e1%bb%81%20javascript%20v%c3%a0%20ki%e1%ba%bfn%20tr%c3%bac%20MVC%20trong%20Odoo%20%28Ph%e1%ba%a7n%201%29&url=https%3a%2f%2fhungpt.info%2fen%2fposts%2fodoo-javascript-classes-and-mvc-architecture%2f&hashtags=Odoo%2cJavascript&via=Hung%20Pham" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
@@ -2707,6 +3247,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <ul>
         <li><a href="#webclass-trong-odoo">web.Class trong Odoo</a></li>
         <li><a href="#webwidget-odoo-class">web.Widget Odoo Class.</a></li>
+        <li><a href="#webwidget-extends-the-servicesmixin">web.Widget extends the ServicesMixin</a></li>
       </ul>
     </li>
   </ul>
