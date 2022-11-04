@@ -4,27 +4,12 @@
   
   <url>
     <loc>https://hungpt.info/en/showcase/hugo/hugo-theme-zzo/</loc>
-    <lastmod>2020-01-19T21:13:42+09:00</lastmod>
+    <lastmod>2020-02-06T02:23:27+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://hungpt.info/en/showcase/hugo/hugo-theme-zdoc/</loc>
-    <lastmod>2020-01-19T21:13:42+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hungpt.info/en/</loc>
-    <lastmod>2022-11-04T14:57:47+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://hungpt.info/ko/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://hungpt.info/en/"
-                />
+    <lastmod>2020-02-06T02:23:27+09:00</lastmod>
   </url>
   
   <url>
@@ -40,21 +25,6 @@
   <url>
     <loc>https://hungpt.info/en/posts/odoo-javascript-classes-and-mvc-architecture_part2/</loc>
     <lastmod>2022-11-04T14:57:47+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hungpt.info/en/posts/</loc>
-    <lastmod>2022-11-04T14:57:47+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://hungpt.info/ko/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://hungpt.info/en/posts/"
-                />
   </url>
   
   <url>
@@ -284,37 +254,37 @@
   
   <url>
     <loc>https://hungpt.info/en/publication/article/</loc>
-    <lastmod>2020-03-05T14:08:48+00:00</lastmod>
+    <lastmod>2020-03-05T14:27:56+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://hungpt.info/en/publication/book/</loc>
-    <lastmod>2020-03-05T14:08:48+00:00</lastmod>
+    <lastmod>2020-03-05T14:27:56+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://hungpt.info/en/publication/misc/</loc>
-    <lastmod>2020-03-05T14:08:48+00:00</lastmod>
+    <lastmod>2020-03-05T14:27:56+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://hungpt.info/en/publication/</loc>
-    <lastmod>2020-03-05T14:08:48+00:00</lastmod>
+    <lastmod>2020-03-05T14:27:56+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://hungpt.info/en/showcase/hugo/</loc>
-    <lastmod>2020-01-19T21:04:11+09:00</lastmod>
+    <lastmod>2020-02-06T02:23:27+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://hungpt.info/en/showcase/</loc>
-    <lastmod>2020-01-19T15:43:38+09:00</lastmod>
+    <lastmod>2020-02-06T02:23:27+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://hungpt.info/en/gallery/</loc>
-    <lastmod>2019-10-31T10:20:16+09:00</lastmod>
+    <lastmod>2020-02-06T02:23:27+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -329,7 +299,7 @@
   
   <url>
     <loc>https://hungpt.info/en/gallery/photo/</loc>
-    <lastmod>2019-10-31T10:20:16+09:00</lastmod>
+    <lastmod>2020-02-06T02:23:27+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -344,32 +314,27 @@
   
   <url>
     <loc>https://hungpt.info/en/presentation/dir/fourth/</loc>
-    <lastmod>2019-10-30T20:48:10+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hungpt.info/en/presentation/</loc>
-    <lastmod>2019-10-30T20:48:10+09:00</lastmod>
+    <lastmod>2020-02-16T17:10:04+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://hungpt.info/en/presentation/third/</loc>
-    <lastmod>2019-10-30T20:46:30+09:00</lastmod>
+    <lastmod>2020-02-16T17:10:04+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://hungpt.info/en/presentation/second/</loc>
-    <lastmod>2019-10-30T20:45:24+09:00</lastmod>
+    <lastmod>2020-02-16T17:10:04+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://hungpt.info/en/presentation/first/</loc>
-    <lastmod>2019-10-30T19:45:20+09:00</lastmod>
+    <lastmod>2020-02-16T17:10:04+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://hungpt.info/en/archive/</loc>
-    <lastmod>2019-10-19T11:44:14+09:00</lastmod>
+    <lastmod>2020-02-06T02:23:27+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -384,7 +349,7 @@
   
   <url>
     <loc>https://hungpt.info/en/about/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-06T02:23:27+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -399,17 +364,32 @@
   
   <url>
     <loc>https://hungpt.info/en/publication/article/article_any_folder_name_1/</loc>
-    <lastmod>2018-06-01T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-05T14:27:56+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://hungpt.info/en/publication/book/book_any_folder_name_1/</loc>
-    <lastmod>2017-06-01T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-05T14:27:56+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://hungpt.info/en/publication/misc/misc_any_folder_name_1/</loc>
-    <lastmod>2016-11-01T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-05T14:27:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hungpt.info/en/</loc>
+    <lastmod>2020-07-24T13:15:31+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://hungpt.info/ko/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hungpt.info/en/"
+                />
   </url>
   
   <url>
@@ -432,6 +412,7 @@
   
   <url>
     <loc>https://hungpt.info/en/tags/index/</loc>
+    <lastmod>2020-02-06T02:23:27+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -442,6 +423,26 @@
                 hreflang="en"
                 href="https://hungpt.info/en/tags/index/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://hungpt.info/en/posts/</loc>
+    <lastmod>2020-02-06T02:23:27+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://hungpt.info/ko/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hungpt.info/en/posts/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://hungpt.info/en/presentation/</loc>
+    <lastmod>2020-02-16T17:10:04+09:00</lastmod>
   </url>
   
   <url>
