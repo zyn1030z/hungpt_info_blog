@@ -1398,7 +1398,7 @@
     "datePublished": "2022-11-04T14:57:47+07:00",
     "dateModified": "2022-11-04T14:57:47+07:00",
     "url" : "https://hungpt.info/en/posts/odoo-javascript-classes-and-mvc-architecture_part2/",
-    "description": "",
+    "description": "\u003cp\u003eBài viết lần này, chúng ta cùng đi tìm hiểu sâu hơn về web.Widget class nhé!\u003c/p\u003e",
     "keywords": ["Odoo","Javascript"],
     "image" : "https://hungpt.info/images/feature1/img_20.png",
     "author": {
@@ -1776,7 +1776,7 @@ if (!doNotTrack) {
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Nov 4, 2022 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;0&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;3&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="Viết bởi">✍️&nbsp;Hung Pham</span>
   
@@ -1800,7 +1800,169 @@ if (!doNotTrack) {
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      
+      <p>Bài viết lần này, chúng ta cùng đi tìm hiểu sâu hơn về web.Widget class nhé!</p>
+<p>Bên cạnh việc extend từ những mixin khác như ở phần 1 mình có nói thì mục đích chính của web.Widget đó chính là render <em><strong>Qweb</strong></em>, thực hiện quản lý <em><strong>life cycle</strong></em> và thêm vào DOM.</p>
+<p><em><strong>Web.Widget</strong></em> có các thuộc tính lấy cảm hứng từ BackboneJS hiển thị trong lớp như <del>tagName</del>,<del>id</del>, <del>className</del>, <del>attributes</del>, <del>events</del>, <del>template</del></p>
+<p><em>xmlDependencies</em>, <em>cssLibs</em>, <em>jsLibs</em> và <em>assetLibs</em> là những thức sẽ được tìm và load trước khi Widget được render.</p>
+<p>Cần chú ý, ***web.Widget có 2 thuộc tính ẩn rất quan trọng như sau:</p>
+<ul>
+<li><em><em>el</em></em>: là 1 DOM element được set giá trị khi chúng ta gọi hàm <em><strong>setElement</strong></em></li>
+<li>$el : là biến Jquery đại diện cho el</li>
+</ul>
+<p>Chú ý: Nếu bạn muốn truy cập đến <em><strong>this.el</strong></em> hoặc <em><strong>this.$el</strong></em> ở sai thời điểm của life cycle thì có thể trả về là <em><strong>undifine</strong></em>, 2 thuộc tính này chỉ có giá trị khi chúng ta hàm <em><strong>renderElement</strong></em> hoặc hàm <em><strong>attach to</strong></em> được gọi.</p>
+<h3 id="render-template-qweb">Render template Qweb</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="cm">/**
+</span><span class="cm">     * Renders the element. The default implementation renders the widget using
+</span><span class="cm">     * QWeb, `this.template` must be defined. The context given to QWeb contains
+</span><span class="cm">     * the &#34;widget&#34; key that references `this`.
+</span><span class="cm">     */</span>
+    <span class="nx">renderElement</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">$el</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">template</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">$el</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">core</span><span class="p">.</span><span class="nx">qweb</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">template</span><span class="p">,</span> <span class="p">{</span><span class="nx">widget</span><span class="o">:</span> <span class="k">this</span><span class="p">}).</span><span class="nx">trim</span><span class="p">());</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">$el</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">_makeDescriptive</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">_replaceElement</span><span class="p">(</span><span class="nx">$el</span><span class="p">);</span>
+    <span class="p">},</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="lifecycle">Lifecycle</h3>
+<p>Vòng đời của 1 widget bao gồm init -&gt; willStart -&gt;[rendering]-&gt; start -&gt; destroy, tương ứng với các hàm có trong Widget.</p>
+<ul>
+<li>Hàm init</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">init</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">parent</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">mixins</span><span class="p">.</span><span class="nx">PropertiesMixin</span><span class="p">.</span><span class="nx">init</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setParent</span><span class="p">(</span><span class="nx">parent</span><span class="p">);</span>
+        <span class="c1">// Bind on_/do_* methods to this
+</span><span class="c1"></span>        <span class="c1">// We might remove this automatic binding in the future
+</span><span class="c1"></span>        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">name</span> <span class="k">in</span> <span class="k">this</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="k">this</span><span class="p">[</span><span class="nx">name</span><span class="p">])</span> <span class="o">===</span> <span class="s2">&#34;function&#34;</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span><span class="p">((</span><span class="sr">/^on_|^do_/</span><span class="p">).</span><span class="nx">test</span><span class="p">(</span><span class="nx">name</span><span class="p">))</span> <span class="p">{</span>
+                    <span class="k">this</span><span class="p">[</span><span class="nx">name</span><span class="p">]</span> <span class="o">=</span> <span class="k">this</span><span class="p">[</span><span class="nx">name</span><span class="p">].</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Hàm willStart sẽ thực hiện bất đồng bộ việc tải thư viện liên quan, file xml</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="o">*</span> <span class="err">@</span><span class="nx">returns</span> <span class="p">{</span><span class="nb">Promise</span><span class="p">}</span>
+     <span class="o">*</span><span class="err">/</span>
+    <span class="nx">willStart</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">proms</span> <span class="o">=</span> <span class="p">[];</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">xmlDependencies</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">proms</span><span class="p">.</span><span class="nx">push</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">proms</span><span class="p">,</span> <span class="nx">_</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">xmlDependencies</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">xmlPath</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="nx">ajax</span><span class="p">.</span><span class="nx">loadXML</span><span class="p">(</span><span class="nx">xmlPath</span><span class="p">,</span> <span class="nx">core</span><span class="p">.</span><span class="nx">qweb</span><span class="p">);</span>
+            <span class="p">}));</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">jsLibs</span> <span class="o">||</span> <span class="k">this</span><span class="p">.</span><span class="nx">cssLibs</span> <span class="o">||</span> <span class="k">this</span><span class="p">.</span><span class="nx">assetLibs</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">proms</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_loadLibs</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="nx">proms</span><span class="p">);</span>
+    <span class="p">},</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Hàm start</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"> <span class="o">*</span> <span class="err">@</span><span class="nx">returns</span> <span class="p">{</span><span class="nb">Promise</span><span class="p">}</span>
+     <span class="o">*</span><span class="err">/</span>
+    <span class="nx">start</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">();</span>
+    <span class="p">},</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Hàm destroy sẽ loại bỏ $ el khỏi DOM và xóa các phần tử con.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">destroy</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">mixins</span><span class="p">.</span><span class="nx">PropertiesMixin</span><span class="p">.</span><span class="nx">destroy</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="insert-dom">Insert DOM</h3>
+<p>web.Widget có các hàm appendTo, insertAfter, attachTo, prependTo đều nhận đối số là 1 jquery element, bạn có thể tìm hiểu thêm trong code core của Odoo.</p>
+<h3 id="tổng-kết">Tổng kết</h3>
+<p>Widget là 1 trong những thành phần quan trọng nhất của Framework, mình khuyên bạn nên dành thời gian đi sâu vào mã nguồn, đọc lại phần giải thích của mình và xem qua <a href="https://www.odoo.com/documentation/14.0/developer/reference/javascript/javascript_reference.html?#widgets">tài liệu này</a></p>
     </article>
     
     
@@ -2678,7 +2840,18 @@ document.addEventListener('DOMContentLoaded', function () {
     
   </div>
   <div class="toc " data-dir="ltr" data-folding="true" data-ani="true">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#render-template-qweb">Render template Qweb</a></li>
+        <li><a href="#lifecycle">Lifecycle</a></li>
+        <li><a href="#insert-dom">Insert DOM</a></li>
+        <li><a href="#tổng-kết">Tổng kết</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
   </div>
 </section>
 
