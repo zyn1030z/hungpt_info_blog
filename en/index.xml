@@ -42,7 +42,7 @@
 
       
       <item>
-        <title>Odoo JavaScript - Phần 2: Tổng quan về javascript và kiến trúc MVC trong Odoo</title>
+        <title>Odoo JavaScript - Phần 2: Tổng quan về classes và kiến trúc MVC trong Odoo</title>
         <link>https://hungpt.info/en/posts/odoo-javascript-classes-and-mvc-architecture_part2/</link>
         <pubDate>Fri, 04 Nov 2022 14:57:47 +0700</pubDate>
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
@@ -98,7 +98,7 @@
       </item>
       
       <item>
-        <title>Odoo JavaScript - Phần 1: Tổng quan về javascript và kiến trúc MVC trong Odoo</title>
+        <title>Odoo JavaScript - Phần 1: Tổng quan về classes và kiến trúc MVC trong Odoo</title>
         <link>https://hungpt.info/en/posts/odoo-javascript-classes-and-mvc-architecture/</link>
         <pubDate>Fri, 04 Nov 2022 02:34:42 +0700</pubDate>
         <author>thaihung412@gmail.com (Hùng Phạm)</author>
