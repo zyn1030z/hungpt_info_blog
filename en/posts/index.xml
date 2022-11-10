@@ -20,6 +20,35 @@
 
       
       <item>
+        <title>Docker là gì? Kiến thức cơ bản về Docker</title>
+        <link>https://hungpt.info/en/posts/docker_part1/</link>
+        <pubDate>Thu, 10 Nov 2022 19:39:13 +0700</pubDate>
+        <author>thaihung412@gmail.com (Hùng Phạm)</author>
+        <atom:modified>Thu, 10 Nov 2022 19:39:13 +0700</atom:modified>
+        <guid>https://hungpt.info/en/posts/docker_part1/</guid>
+        <description>&lt;p&gt;Trong bài lab lần này, chúng ta sẽ tìm hiểu về docker. Vậy docker là gì?&lt;br /&gt;
+Docker là nền tảng phần mềm cho phép bạn dựng, kiểm thử và triển khai ứng dụng một cách nhanh chóng.&lt;/p&gt;</description>
+        
+        <dc:creator>Hung Pham</dc:creator>
+        <media:content url="https://hungpt.info/images/feature2/img_9.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Odoo</category>
+            
+          
+            
+              <category>Javascript</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
         <title>Odoo JavaScript - Phần 4: Tạo OWL view</title>
         <link>https://hungpt.info/en/posts/odoo-javascript-classes-and-mvc-architecture_part4/</link>
         <pubDate>Sat, 05 Nov 2022 18:05:31 +0700</pubDate>
